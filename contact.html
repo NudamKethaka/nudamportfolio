@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Nudam Kethaka - Professional Graphic Designer for brand identity, visual storytelling, and digital design projects.">
+  <title>Contact - Nudam Kethaka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Poppins"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#E6F0FF',
+              100: '#CCE0FF',
+              200: '#99C2FF',
+              300: '#66A3FF',
+              400: '#3385FF',
+              500: '#0066FF', // Primary blue
+              600: '#0052CC',
+              700: '#003D99',
+              800: '#002966',
+              900: '#001433',
+            }
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            }
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out forwards',
+            fadeIn: 'fadeIn 0.5s ease-out forwards',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom styles that complement Tailwind */
+    .text-gradient {
+      background: linear-gradient(90deg, #3385FF, #00D1FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px -5px rgba(0, 102, 255, 0.3);
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #3385FF;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Form focus effects */
+    .form-input:focus, .form-textarea:focus {
+      border-color: #3385FF;
+      box-shadow: 0 0 0 3px rgba(51, 133, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-body overflow-x-hidden">
+  <!-- Navigation -->
+  <header class="fixed w-full top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+    <div class="container mx-auto p-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-display font-bold tracking-tight flex items-center">
+          <span class="text-gradient">NUDAM</span><span class="text-white ml-1">.</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-sm uppercase tracking-wider">
+          <a href="index.html" class="nav-link hover:text-primary-400">Home</a>
+          <a href="portfolio.html" class="nav-link hover:text-primary-400">Portfolio</a>
+          <a href="thoughts.html" class="nav-link hover:text-primary-400">Thoughts</a>
+          <a href="about.html" class="nav-link hover:text-primary-400">About</a>
+          <a href="contact.html" class="nav-link hover:text-primary-400 text-primary-400">Contact</a>
+        </nav>
+        <button id="mobileMenuBtn" class="md:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden w-full bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto py-4 px-6 flex flex-col space-y-4">
+        <a href="index.html" class="py-2 hover:text-primary-400">Home</a>
+        <a href="portfolio.html" class="py-2 hover:text-primary-400">Portfolio</a>
+        <a href="thoughts.html" class="py-2 hover:text-primary-400">Thoughts</a>
+        <a href="about.html" class="py-2 hover:text-primary-400">About</a>
+        <a href="contact.html" class="py-2 hover:text-primary-400 text-primary-400">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="pt-32 pb-12 px-6 max-w-6xl mx-auto">
+    <div class="animate-fadeInUp">
+      <h1 class="text-4xl md:text-5xl font-bold font-display mb-6">
+        <span class="text-gradient">Get In</span> Touch
+      </h1>
+      <p class="text-gray-400 text-lg max-w-3xl">
+        Have a project in mind? Let's discuss how we can work together to bring your vision to life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="px-6 py-12 max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16">
+      <!-- Contact Form -->
+      <div class="animate-fadeIn">
+        <h2 class="text-2xl font-bold mb-6">Send a Message</h2>
+        <form action="#" method="POST" class="space-y-6">
+          <!-- Name Field -->
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required
+                   class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none text-white">
+          </div>
+          
+          <!-- Email Field -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required
+                   class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none text-white">
+          </div>
+          
+          <!-- Subject Field -->
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required
+                   class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none text-white">
+          </div>
+          
+          <!-- Project Type Field -->
+          <div>
+            <label for="project" class="block text-sm font-medium text-gray-300 mb-2">Project Type</label>
+            <select id="project" name="project" 
+                    class="form-input w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none text-white">
+              <option value="">Select a project type</option>
+              <option value="brand-identity">Brand Identity</option>
+              <option value="ui-ux">UI/UX Design</option>
+              <option value="print">Print Design</option>
+              <option value="packaging">Packaging</option>
+              <option value="motion">Motion Graphics</option>
+              <option value="Videographer">Videographer</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <!-- Message Field -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required
+                      class="form-textarea w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none text-white resize-y"></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <div>
+            <button type="submit" 
+                    class="w-full bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg text-sm font-medium tracking-wide transition flex items-center justify-center">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane ml-2"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="animate-fadeIn">
+        <h2 class="text-2xl font-bold mb-6">Contact Information</h2>
+        
+        <!-- Contact Cards -->
+        <div class="space-y-6">
+          <!-- Email -->
+          <div class="bg-gray-800 rounded-xl p-6 card-hover">
+            <div class="flex items-center">
+              <div class="bg-primary-500/20 p-4 rounded-full mr-4">
+                <i class="fas fa-envelope text-primary-400 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium mb-1">Email</h3>
+                <a href="mailto:nudam@example.com" class="text-gray-300 hover:text-primary-400 transition">nudamkethaka@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Phone -->
+          <div class="bg-gray-800 rounded-xl p-6 card-hover">
+            <div class="flex items-center">
+              <div class="bg-primary-500/20 p-4 rounded-full mr-4">
+                <i class="fas fa-phone-alt text-primary-400 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium mb-1">Phone</h3>
+                <a href="tel:+1234567890" class="text-gray-300 hover:text-primary-400 transition">075-403-3-425</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Location -->
+          <div class="bg-gray-800 rounded-xl p-6 card-hover">
+            <div class="flex items-center">
+              <div class="bg-primary-500/20 p-4 rounded-full mr-4">
+                <i class="fas fa-map-marker-alt text-primary-400 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-medium mb-1">Location</h3>
+                <p class="text-gray-300">Colombu, Sri Lanka</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="bg-gray-800 rounded-xl p-6">
+            <h3 class="text-lg font-medium mb-4">Connect With Me</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-gray-700 hover:bg-primary-500 p-3 rounded-full transition text-white">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="bg-gray-700 hover:bg-primary-500 p-3 rounded-full transition text-white">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="bg-gray-700 hover:bg-primary-500 p-3 rounded-full transition text-white">
+                <i class="fab fa-behance"></i>
+              </a>
+              <a href="#" class="bg-gray-700 hover:bg-primary-500 p-3 rounded-full transition text-white">
+                <i class="fab fa-dribbble"></i>
+              </a>
+              <a href="#" class="bg-gray-700 hover:bg-primary-500 p-3 rounded-full transition text-white">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="px-6 py-16 max-w-4xl mx-auto border-t border-gray-800 mt-10">
+    <h2 class="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
+    
+    <div class="space-y-6">
+      <!-- FAQ Item 1 -->
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-3">What is your design process like?</h3>
+        <p class="text-gray-400">
+          My design process typically involves discovery (understanding your goals and audience), research, conceptualization, design development, revisions based on feedback, and final delivery. I believe in collaboration throughout the process to ensure the final result aligns perfectly with your vision.
+        </p>
+      </div>
+      
+      <!-- FAQ Item 2 -->
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-3">How long does a typical project take?</h3>
+        <p class="text-gray-400">
+          Project timelines vary depending on complexity and scope. A brand identity project might take 4-6 weeks, while a smaller project like a poster design could be completed in 1-2 weeks. I'll provide a detailed timeline during our initial consultation based on your specific needs.
+        </p>
+      </div>
+      
+      <!-- FAQ Item 3 -->
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-3">What information do you need to start a project?</h3>
+        <p class="text-gray-400">
+          To get started, I'll need to understand your business/project goals, target audience, design preferences, competitor insights, and any existing brand materials. I provide a detailed brief questionnaire to all new clients to ensure I have all the necessary information.
+        </p>
+      </div>
+      
+      <!-- FAQ Item 4 -->
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-3">Do you offer ongoing design support?</h3>
+        <p class="text-gray-400">
+          Yes! After completing your project, I'm available for ongoing design support and maintenance. Many clients choose to work with me on a retainer basis for consistent brand management and regular design needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="max-w-6xl mx-auto py-16 px-6 border-t border-gray-800">
+    <h2 class="text-3xl font-bold mb-8 text-center">Location</h2>
+    
+    <!-- Map Placeholder (In a real site, you would integrate with Google Maps or similar) -->
+    <div class="bg-gray-800 rounded-xl h-80 overflow-hidden relative">
+      <!-- This would be replaced with an actual map in production -->
+      <div class="absolute inset-0 flex items-center justify-center text-gray-600">
+        <div class="text-center">
+          <i class="fas fa-map-marked-alt text-6xl mb-4"></i>
+          <p class="text-lg">Map would be displayed here</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Inquiry CTA -->
+  <section class="px-6 py-20 max-w-4xl mx-auto text-center">
+    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-800">
+      <h3 class="text-3xl font-bold mb-4">Ready to bring your ideas to life?</h3>
+      <p class="text-gray-400 max-w-xl mx-auto mb-8">
+        Let's collaborate on your next project. Whether it's a brand refresh, a new website, or print materials, I'm here to help you make an impact.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="portfolio.html" class="inline-block bg-transparent border border-primary-500 text-primary-400 hover:bg-primary-500/10 px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
+          <span>View My Portfolio</span>
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 mt-12 p-8 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Brand Column -->
+        <div class="md:col-span-1">
+          <h2 class="text-2xl font-display font-bold tracking-tight mb-4">
+            <span class="text-gradient">NUDAM</span><span class="text-white">.</span>
+          </h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Graphic designer specialized in brand identity, digital design, and visual storytelling.
+          </p>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-instagram text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-twitter text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-behance text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-dribbble text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-linkedin-in text-lg"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="md:col-span-1">
+          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-primary-400 transition">Home</a></li>
+            <li><a href="portfolio.html" class="hover:text-primary-400 transition">Portfolio</a></li>
+            <li><a href="thoughts.html" class="hover:text-primary-400 transition">Thoughts</a></li>
+            <li><a href="about.html" class="hover:text-primary-400 transition">About</a></li>
+            <li><a href="contact.html" class="hover:text-primary-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="md:col-span-1">
+          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Services</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-primary-400 transition">Brand Identity</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">UI/UX Design</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">Print Design</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">Packaging</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">Motion Graphics</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="md:col-span-1">
+          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-2 text-primary-400"></i>
+              <a href="mailto:nudam@example.com" class="hover:text-primary-400 transition">nudam@example.com</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-2 text-primary-400"></i>
+              <a href="tel:+1234567890" class="hover:text-primary-400 transition">+1 (234) 567-890</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-400"></i>
+              <span>New York City, USA</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">&copy; 2025 Nudam Kethaka. All rights reserved.</p>
+        <div class="mt-4 md:mt-0">
+          <a href="#" class="text-xs text-gray-500 hover:text-gray-300 mx-2">Privacy Policy</a>
+          <a href="#" class="text-xs text-gray-500 hover:text-gray-300 mx-2">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+      // Toggle icon
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Form input animations
+    const formInputs = document.querySelectorAll('.form-input, .form-textarea');
+    formInputs.forEach(input => {
+      input.addEventListener('focus', () => {
+        input.parentElement.classList.add('animate-fadeIn');
+      });
+    });
+    
+    // Initialize card hover animations
+    document.querySelectorAll('.card-hover').forEach(card => {
+      card.style.transition = 'opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease';
+    });
+  </script>
+</body>
+</html>

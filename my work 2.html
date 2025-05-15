@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Project details for Minimalist Brand Kit by Nudam Kethaka">
+  <title>AITECH Art Works | Nudam Kethaka - Graphic Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Poppins"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#E6F0FF',
+              100: '#CCE0FF',
+              200: '#99C2FF',
+              300: '#66A3FF',
+              400: '#3385FF',
+              500: '#0066FF', // Primary blue
+              600: '#0052CC',
+              700: '#003D99',
+              800: '#002966',
+              900: '#001433',
+            }
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            }
+          },
+          animation: {
+            fadeInUp: 'fadeInUp 1s ease-out forwards',
+            fadeIn: 'fadeIn 0.5s ease-out forwards',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom styles that complement Tailwind */
+    .text-gradient {
+      background: linear-gradient(90deg, #3385FF, #00D1FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px -5px rgba(0, 102, 255, 0.3);
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #3385FF;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Project page specific styles */
+    .project-image {
+      transition: transform 0.3s ease;
+    }
+    
+    .project-image:hover {
+      transform: scale(1.02);
+    }
+    
+    .detail-item {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    @media (min-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-body overflow-x-hidden">
+  <!-- Navigation -->
+  <header class="fixed w-full top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+    <div class="container mx-auto p-4">
+      <div class="flex justify-between items-center">
+        <a href="index.html" class="text-2xl font-display font-bold tracking-tight flex items-center">
+          <span class="text-gradient">NUDAM</span><span class="text-white ml-1">.</span>
+        </a>
+        <nav class="hidden md:flex space-x-6 text-sm uppercase tracking-wider">
+          <a href="index.html" class="nav-link hover:text-primary-400">Home</a>
+          <a href="portfolio.html" class="nav-link hover:text-primary-400">Portfolio</a>
+          <a href="thoughts.html" class="nav-link hover:text-primary-400">Thoughts</a>
+          <a href="about.html" class="nav-link hover:text-primary-400">About</a>
+          <a href="contact.html" class="nav-link hover:text-primary-400">Contact</a>
+        </nav>
+        <button id="mobileMenuBtn" class="md:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden w-full bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto py-4 px-6 flex flex-col space-y-4">
+        <a href="index.html" class="py-2 hover:text-primary-400">Home</a>
+        <a href="portfolio.html" class="py-2 hover:text-primary-400">Portfolio</a>
+        <a href="thoughts.html" class="py-2 hover:text-primary-400">Thoughts</a>
+        <a href="about.html" class="py-2 hover:text-primary-400">About</a>
+        <a href="contact.html" class="py-2 hover:text-primary-400">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Project Hero Section -->
+  <section class="pt-32 pb-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row gap-12">
+        <div class="md:w-2/3">
+          <!-- Breadcrumb -->
+          <div class="flex items-center text-sm text-gray-400 mb-8">
+            <a href="portfolio.html" class="hover:text-primary-400">Portfolio</a>
+            <span class="mx-2">/</span>
+            <span>AITECH Art Works</span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl font-extrabold font-display mb-6 leading-tight">
+            AITECH <br>             
+            <span class="text-gradient">Facebook Post Designing</span>
+          </h1>
+          <p class="text-xl text-gray-400 mb-8 max-w-2xl">
+            A complete visual identity system for a sustainable lifestyle brand focused on simplicity and environmental consciousness.
+          </p>
+          
+          <div class="flex flex-wrap gap-4 mb-8">
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Brand Identity</span>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Typography</span>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Packaging</span>
+            <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Minimalism</span>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
+              <span>Contact About Project</span>
+              <i class="fas fa-paper-plane ml-2"></i>
+            </a>
+            <a href="https://web.facebook.com/aitechno.lk" class="inline-block bg-transparent border border-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
+              <span>View Live Project</span>
+              <i class="fas fa-external-link-alt ml-2"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="md:w-1/3">
+          <div class="bg-gray-800 rounded-xl p-6 sticky top-32">
+            <h3 class="font-bold text-lg mb-4">Project Details</h3>
+            <div class="space-y-4">
+              <div class="detail-item">
+                <h4 class="text-sm text-gray-400 mb-1">Client</h4>
+                <p class="font-medium">AITECH</p>
+              </div>
+              <div class="detail-item">
+                <h4 class="text-sm text-gray-400 mb-1">Year</h4>
+                <p class="font-medium">2024-2025</p>
+              </div>
+              <div class="detail-item">
+                <h4 class="text-sm text-gray-400 mb-1">Services</h4>
+                <p class="font-medium">FB Poster Design</p>
+              </div>
+              <div class="detail-item">
+                <h4 class="text-sm text-gray-400 mb-1">Duration</h4>
+                <p class="font-medium">8 weeks</p>
+              </div>
+              <div>
+                <h4 class="text-sm text-gray-400 mb-1">Share</h4>
+                <div class="flex space-x-4 text-gray-400">
+                  <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#" class="hover:text-primary-400 transition"><i class="fas fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Featured Image -->
+  <section class="px-6 py-12 bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <img src="image/AITECH Work.png" 
+           alt="Minimalist Brand Kit Featured Image" 
+           class="w-full h-auto rounded-xl shadow-2xl project-image">
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <section class="px-6 py-16 max-w-4xl mx-auto">
+    <div class="prose prose-invert max-w-none">
+      <h2 class="text-3xl font-bold mb-6">The Challenge</h2>
+      <p class="text-gray-400 mb-8">
+        Earthly Goods approached me with a need to completely revamp their visual identity. As a company focused on sustainable, minimalist products, their existing branding didn't reflect their core values. The challenge was to create a brand system that communicated environmental consciousness while maintaining a premium, minimalist aesthetic.
+      </p>
+      
+      <h2 class="text-3xl font-bold mb-6">The Solution</h2>
+      <p class="text-gray-400 mb-8">
+        I developed a comprehensive brand identity centered around organic shapes, earthy tones, and clean typography. The logo mark combines abstract leaf motifs with geometric precision, representing the balance between nature and human design. The color palette uses muted greens and browns derived from natural pigments, with crisp white space to create breathing room.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8 my-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Typography System</h3>
+          <p class="text-gray-400 mb-4">
+            The typography combines a clean sans-serif (Inter) for readability with a subtle serif (Lora) for premium touchpoints. This duality reflects the brand's balance between accessibility and sophistication.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Color Palette</h3>
+          <p class="text-gray-400 mb-4">
+            The primary palette consists of three earthy tones complemented by a warm white and deep charcoal. These colors were specifically chosen for their natural origins and print reproducibility.
+          </p>
+        </div>
+      </div>
+      
+      <h2 class="text-3xl font-bold mb-6">Visual Language</h2>
+      <p class="text-gray-400 mb-8">
+        The visual language extends beyond just logo and colors. I developed a system of organic shapes that can be used as patterns, frames, or decorative elements. These shapes are derived from the logo mark but can be adapted flexibly across various applications.
+      </p>
+      
+      <!-- Image Gallery -->
+      <div class="gallery-grid my-12">
+        <img src="image/AITECH/ai tech poyaa post1.jpg" 
+             alt="Brand Application 1" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/Aitech-Poya-post2.jpg" 
+             alt="Brand Application 2" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/AITECH-Poya-Post.jpg" 
+             alt="Brand Application 3" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/ai-tech-poya-post.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/AITECH-3.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/AiTECH-01-01.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/AITECH-4.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+        <img src="image/AITECH/aitech deeoavali post2.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+       <img src="image/AITECH/Artboard 1 copy 2.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      <img src="image/AITECH/Artboard 1 copy 3.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      <img src="image/AITECH/Artboard 1 copy 4.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      <img src="image/AITECH/Artboard 3.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      <img src="image/AITECH/Artboard 6.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      <img src="image/AITECH/post2.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      <img src="image/AITECH/AITECH.jpg" 
+             alt="Brand Application 4" 
+             class="w-full h-auto rounded-lg project-image">
+      </div>
+      
+      <h2 class="text-3xl font-bold mb-6">Packaging System</h2>
+      <p class="text-gray-400 mb-8">
+        A key component was developing sustainable packaging that aligned with the brand values. The solution uses recycled materials with minimal ink coverage, focusing on embossing and debossing for tactile quality. The packaging system is modular, allowing various product sizes while maintaining visual consistency.
+      </p>
+      
+      <div class="bg-gray-800 rounded-xl p-8 my-12">
+        <blockquote class="border-l-4 border-primary-500 pl-6">
+          <p class="text-xl italic text-gray-300 mb-4">
+            "Nudam completely transformed our brand identity. The designs were not only beautiful but perfectly captured our company's values and mission. The packaging system alone reduced our material costs by 15% while improving customer perception."
+          </p>
+          <cite class="flex items-center">
+            <img src="image/AITECH\FB_IMG_1729007148038.jpg" 
+                 alt="Sarah Johnson" 
+                 class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <p class="font-medium">A.I Technologies PVT LTD</p>
+              <p class="text-gray-400 text-sm">Company</p>
+            </div>
+          </cite>
+        </blockquote>
+      </div>
+      
+      <h2 class="text-3xl font-bold mb-6">Results</h2>
+      <p class="text-gray-400 mb-8">
+        Since launching the new brand identity, Earthly Goods has seen a 40% increase in brand recognition and a 25% uplift in sales. The packaging system won a Sustainable Design Award and has been featured in several design publications.
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-6 my-12">
+        <div class="bg-gray-800 rounded-xl p-6 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">40%</div>
+          <div class="text-gray-400 text-sm">Increase in brand recognition</div>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">25%</div>
+          <div class="text-gray-400 text-sm">Sales uplift</div>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-6 text-center">
+          <div class="text-3xl font-bold text-primary-400 mb-2">15%</div>
+          <div class="text-gray-400 text-sm">Reduction in packaging costs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Projects -->
+  <section class="px-6 py-16 bg-gray-800 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-2xl font-bold mb-8">More Projects</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <a href="my work 1.html" class="bg-gray-700 rounded-xl overflow-hidden card-hover">
+          <div class="relative">
+            <img src="image/Oushani Work.png" 
+                 alt="Related Project 1" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
+              Branding
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-semibold mb-2">Oushani International Art Works</h4>
+            <p class="text-gray-400 text-sm">Complete branding system for a minimalist lifestyle brand.</p>
+          </div>
+        </a>
+        
+        <!-- Project 2 -->
+        <a href="my work 3.html" class="bg-gray-700 rounded-xl overflow-hidden card-hover">
+          <div class="relative">
+            <img src="image/lankapack art work.jpg" 
+                 alt="Related Project 2" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
+              Branding
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-semibold mb-2">Website Redesign</h4>
+            <p class="text-gray-400 text-sm">Nonprofit organization website</p>
+          </div>
+        </a>
+        
+        <!-- Project 3 -->
+        <a href="my work 4.html" class="bg-gray-700 rounded-xl overflow-hidden card-hover">
+          <div class="relative">
+            <img src="image/viatsri.jpg" 
+                 alt="Related Project 3" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
+              Packaging
+            </div>
+          </div>
+          <div class="p-6">
+            <h4 class="text-lg font-semibold mb-2">Coffee Packaging</h4>
+            <p class="text-gray-400 text-sm">Sustainable packaging concept</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="px-6 py-20 max-w-4xl mx-auto text-center">
+    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-800">
+      <h3 class="text-3xl font-bold mb-4">Have a similar project?</h3>
+      <p class="text-gray-400 max-w-xl mx-auto mb-8">
+        Let's discuss how we can create something amazing for your brand. Reach out to start the conversation.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="contact.html" class="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
+          <span>Contact Me</span>
+          <i class="fas fa-paper-plane ml-2"></i>
+        </a>
+        <a href="portfolio.html" class="inline-block bg-transparent border border-primary-500 text-primary-400 hover:bg-primary-500/10 px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
+          <span>View All Projects</span>
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 p-8 border-t border-gray-700">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Brand Column -->
+        <div class="md:col-span-1">
+          <h2 class="text-2xl font-display font-bold tracking-tight mb-4">
+            <span class="text-gradient">NUDAM</span><span class="text-white">.</span>
+          </h2>
+          <p class="text-gray-400 text-sm mb-4">
+            Graphic designer specialized in brand identity, digital design, and visual storytelling.
+          </p>
+          <div class="flex space-x-4 text-gray-400">
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-instagram text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-twitter text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-behance text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-dribbble text-lg"></i></a>
+            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-linkedin-in text-lg"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="md:col-span-1">
+          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="index.html" class="hover:text-primary-400 transition">Home</a></li>
+            <li><a href="portfolio.html" class="hover:text-primary-400 transition">Portfolio</a></li>
+            <li><a href="thoughts.html" class="hover:text-primary-400 transition">Thoughts</a></li>
+            <li><a href="about.html" class="hover:text-primary-400 transition">About</a></li>
+            <li><a href="contact.html" class="hover:text-primary-400 transition">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="md:col-span-1">
+          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Services</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-primary-400 transition">Brand Identity</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">UI/UX Design</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">Print Design</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">Packaging</a></li>
+            <li><a href="#" class="hover:text-primary-400 transition">Motion Graphics</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="md:col-span-1">
+          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h5>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-2 text-primary-400"></i>
+              <a href="mailto:nudam@example.com" class="hover:text-primary-400 transition">nudam@example.com</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-2 text-primary-400"></i>
+              <a href="tel:+1234567890" class="hover:text-primary-400 transition">+1 (234) 567-890</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-400"></i>
+              <span>New York City, USA</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">&copy; 2025 Nudam Kethaka. All rights reserved.</p>
+        <div class="mt-4 md:mt-0">
+          <a href="#" class="text-xs text-gray-500 hover:text-gray-300 mx-2">Privacy Policy</a>
+          <a href="#" class="text-xs text-gray-500 hover:text-gray-300 mx-2">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+      // Toggle icon
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Initialize animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectImages = document.querySelectorAll('.project-image');
+      
+      projectImages.forEach((image, index) => {
+        // Apply staggered animation
+        image.style.opacity = '0';
+        image.style.transform = 'scale(0.98)';
+        image.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+          image.style.opacity = '1';
+          image.style.transform = 'scale(1)';
+        }, 150 * index);
+      });
+    });
+  </script>
+</body>
+</html>
