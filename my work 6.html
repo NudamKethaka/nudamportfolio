@@ -119,6 +119,38 @@
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
       }
     }
+
+    /* Responsive video containers */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%; /* 1:1 aspect ratio */
+      overflow: hidden;
+      border-radius: 0.75rem;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Responsive grid for videos */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white font-body overflow-x-hidden">
@@ -230,7 +262,7 @@
   <!-- Project Featured Image -->
   <section class="px-6 py-12 bg-gray-800">
     <div class="max-w-6xl mx-auto">
-      <img src="image/manasa ashrama/manasa coverphoto.jpg" 
+      <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa%20coverphoto.jpg?updatedAt=1747692601749" 
            alt="Minimalist Brand Kit Featured Image" 
            class="w-full h-auto rounded-xl shadow-2xl project-image">
     </div>
@@ -269,70 +301,97 @@
         The visual language extends beyond just logo and colors. I developed a system of organic shapes that can be used as patterns, frames, or decorative elements. These shapes are derived from the logo mark but can be adapted flexibly across various applications.
       </p>
       
-      <!-- Image Gallery -->
-      <div class="gallery-grid my-12">
-        <img src="image/manasa ashrama/manasa poya post.jpg" 
-             alt="Brand Application 1" 
-             class="w-full h-auto rounded-lg project-image">
-        <img src="image/manasa ashrama/manasa-ahramaya.jpg" 
-             alt="Brand Application 2" 
-             class="w-full h-auto rounded-lg project-image">
-        <img src="image/manasa ashrama/manasa-poya-post.jpg" 
-             alt="Brand Application 3" 
-             class="w-full h-auto rounded-lg project-image">
-        <img src="image/manasa ashrama/manasa-poya-post2.jpg" 
-             alt="Brand Application 4" 
-             class="w-full h-auto rounded-lg project-image">
-        <img src="image/manasa ashrama/manasa.png" 
-             alt="Brand Application 4" 
-             class="w-full h-auto rounded-lg project-image">
-        <img src="image/manasa ashrama/manasa1.png" 
-             alt="Brand Application 4" 
-             class="w-full h-auto rounded-lg project-image">
-      </div>
+      <!-- Image Gallery Section -->
+      <section class="my-12">
+        <h2 class="text-2xl font-bold mb-6 text-center">Project Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-lg overflow-hidden shadow-md">
+            <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa%20poya%20post.jpg?updatedAt=1747692588884" 
+                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                 alt="Brand Identity Design 1" />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-md">
+            <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa-ahramaya.jpg?updatedAt=1747692591699" 
+                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                 alt="Brand Identity Design 2" />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-md">
+            <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa.png?updatedAt=1747692592773" 
+                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                 alt="Brand Identity Design 3" />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-md">
+            <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa-poya-post2.jpg?updatedAt=1747692596534" 
+                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                 alt="Brand Identity Design 4" />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-md">
+            <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa-poya-post.jpg?updatedAt=1747692598374" 
+                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                 alt="Brand Identity Design 5" />
+          </div>
+          <div class="rounded-lg overflow-hidden shadow-md">
+            <img src="https://ik.imagekit.io/kvtr2cjd2c/manasa1.png?updatedAt=1747692602826" 
+                 class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" 
+                 alt="Brand Identity Design 6" />
+          </div>
+        </div>
+      </section>
 
+      <!-- Video Gallery Section -->
+      <section class="my-16">
+        <h3 class="text-2xl font-bold mb-8 text-center">Video Gallery</h3>
+        
+        <!-- First row of videos -->
+        <div class="video-grid mb-8">
+          <div class="video-container">
+            <iframe src="https://mega.nz/embed/k31U2KDA#SsI7jzR4q1JG_4HKjbCokPp2kKYkXqAdJA3821HatnY!1a" 
+                    allowfullscreen 
+                    allow="autoplay;"
+                    title="Brand Kit Video 1">
+            </iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://mega.nz/embed/pidTHAYB#Y3EqhpohnO31LT6-yuJqRFYKyjU6fz5lwAhfY1B_LRo!1a" 
+                    allowfullscreen 
+                    allow="autoplay;"
+                    title="Brand Kit Video 2">
+            </iframe>
+          </div>
+        </div>
 
-           <!-- Video Gallery Section -->
-<section class="px-2 py-2 ">
-  <div class="mx-auto mx-auto">
-    <h3 class="text-2xl font-bold mb-8 text-center">Video Gallery</h3>
-    <div class="grid md:grid-cols-5 lg:grid-cols-2 gap-8">
-      <!-- Video 1 -->
-    <iframe width="360" height="360" frameborder="50" src="https://mega.nz/embed/k31U2KDA#SsI7jzR4q1JG_4HKjbCokPp2kKYkXqAdJA3821HatnY!1a" allowfullscreen allow="autoplay;"></iframe>
-  <iframe width="360" height="360" frameborder="50" src="https://mega.nz/embed/pidTHAYB#Y3EqhpohnO31LT6-yuJqRFYKyjU6fz5lwAhfY1B_LRo!1a" allowfullscreen allow="autoplay;"></iframe>  
-  </div>
+        <!-- Second row of videos -->
+        <div class="video-grid mb-8">
+          <div class="video-container">
+            <iframe src="https://mega.nz/embed/VysVhAKC#lO6uIg4OaDRBZMOATvxZJGo53pwhR5qwGsdUQ0KaaeY" 
+                    allowfullscreen
+                    title="Brand Kit Video 3">
+            </iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://mega.nz/embed/dit0yB7S#I1ErQCdWEZUWUNDLWVgwsJ5Wri0MUv2s21EeWiCiEXk" 
+                    allowfullscreen
+                    title="Brand Kit Video 4">
+            </iframe>
+          </div>
+        </div>
 
-<br>
-
-  <div class="grid md:grid-cols-5 lg:grid-cols-2 gap-8">
-      <!-- Video 2 -->
-     <iframe width="360" height="360" frameborder="50" src="https://mega.nz/embed/VysVhAKC#lO6uIg4OaDRBZMOATvxZJGo53pwhR5qwGsdUQ0KaaeY" allowfullscreen ></iframe>
-     <iframe width="360" height="360" frameborder="50" src="https://mega.nz/embed/dit0yB7S#I1ErQCdWEZUWUNDLWVgwsJ5Wri0MUv2s21EeWiCiEXk" allowfullscreen ></iframe> 
-    </div>
-
-    <br>
-  <div class="grid md:grid-cols-5 lg:grid-cols-2 gap-8">
-      <!-- Video 3 -->
-      
-      <iframe width="360" height="360" frameborder="0" src="https://mega.nz/embed/5m8xGJqD#ul1B37JNGyc1WquO7H3ZZW9VoKQWY5Oh7yBStz7MpyQ" allowfullscreen ></iframe>
-      <iframe width="360" height="360" frameborder="50" src="https://mega.nz/embed/8i1FBJYY#IDP5mhBMOd-6hwmUVt_jkmK4wuLuAF65dopK9XDDS-I" allowfullscreen ></iframe>
-      </div>
-      </div>
-      <!-- Video 4 -->
-      <div class="relative aspect-w-9 aspect-h-16 rounded-xl overflow-hidden card-hover">
-       
-
-      </div>
-      <!-- Video 5 -->
-      <div class="relative aspect-w-9 aspect-h-16 rounded-xl overflow-hidden card-hover">
-       
-
-      <!-- Video 6 -->
-      <div class="relative aspect-w-9 aspect-h-16 rounded-xl overflow-hidden card-hover">
-      
-    </div>
-  </div>
-</section>
+        <!-- Third row of videos -->
+        <div class="video-grid">
+          <div class="video-container">
+            <iframe src="https://mega.nz/embed/5m8xGJqD#ul1B37JNGyc1WquO7H3ZZW9VoKQWY5Oh7yBStz7MpyQ" 
+                    allowfullscreen
+                    title="Brand Kit Video 5">
+            </iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://mega.nz/embed/8i1FBJYY#IDP5mhBMOd-6hwmUVt_jkmK4wuLuAF65dopK9XDDS-I" 
+                    allowfullscreen
+                    title="Brand Kit Video 6">
+            </iframe>
+          </div>
+        </div>
+      </section>
       
       <h2 class="text-3xl font-bold mb-6">Packaging System</h2>
       <p class="text-gray-400 mb-8">
@@ -345,12 +404,12 @@
             "Nudam completely transformed our brand identity. The designs were not only beautiful but perfectly captured our company's values and mission. The packaging system alone reduced our material costs by 15% while improving customer perception."
           </p>
           <cite class="flex items-center">
-            <img src="image/manasa ashrama/manasa logo.jpg" 
-                 alt="Sarah Johnson" 
+            <img src="/api/placeholder/48/48" 
+                 alt="Manasa Ashramaya" 
                  class="w-12 h-12 rounded-full mr-4">
             <div>
               <p class="font-medium">Manasa Ashramaya</p>
-              <p class="text-gray-400 text-sm">Company</p>
+              <p class="text-gray-400 text-sm">Company Representative</p>
             </div>
           </cite>
         </blockquote>
