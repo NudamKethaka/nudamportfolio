@@ -1,662 +1,438 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Nudam Kethaka - Professional Graphic Designer specializing in brand identity, visual storytelling, and digital design.">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Nudam Kethaka - Professional Graphic Designer in New York specializing in brand identity, videography, logo design, and video editing services for businesses." />
-  <meta name="keywords" content="graphic design, brand identity, logo design, videography, video editing, 3D modeling, poster design, New York designer" />
-  <meta name="author" content="Nudam Kethaka" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nudam Kethaka | Graphic Designer & Videographer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-  <!-- Open Graph Tags -->
-<meta property="og:title" content="Nudam Kethaka - Professional Graphic Designer" />
-<meta property="og:description" content="Expert in brand identity, videography, and digital design services. Transform your brand with professional visual solutions." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://yourdomain.com/" />
-<meta property="og:image" content="https://yourdomain.com/image/og-preview.jpg" />
+    <style>
+        /* ------------------- */
+        /* --- CSS STYLING --- */
+        /* ------------------- */
 
-<!-- Twitter Card Tags -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Nudam Kethaka - Graphic Design Services" />
-<meta name="twitter:description" content="Brand identity, videography, and visual storytelling services by a professional designer." />
-<meta name="twitter:image" content="https://yourdomain.com/image/twitter-preview.jpg" />
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://yourdomain.com/" />
-
-  <title>Nudam Kethaka - Graphic Designer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['"Poppins"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
-          },
-          colors: {
-            primary: {
-               40: '#ffffff',
-               50: '#E6F0FF',
-              100: '#CCE0FF',
-              200: '#99C2FF',
-              300: '#66A3FF',
-              400: '#3385FF',
-              500: '#0066FF', // Primary blue
-              600: '#0052CC',
-              700: '#003D99',
-              800: '#002966',
-              900: '#001433',
-            }
-          },
-          keyframes: {
-            fadeInUp: {
-              '0%': { opacity: 0, transform: 'translateY(20px)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' },
-            },
-            fadeIn: {
-              '0%': { opacity: 0 },
-              '100%': { opacity: 1 },
-            }
-          },
-          animation: {
-            fadeInUp: 'fadeInUp 1s ease-out forwards',
-            fadeIn: 'fadeIn 0.5s ease-out forwards',
-          }
+        /* --- 1. Global & Root Variables (BLUE THEME) --- */
+        :root {
+            --bg-color: #0d0d0d;
+            --text-color: #f0f0f0;
+            --primary-color-start: #3b82f6; /* Blue */
+            --primary-color-end: #22d3ee;   /* Cyan */
+            --accent-blue: #3b82f6;        /* Consistent Blue Accent */
+            --card-color: #1a1a1a;
+            --border-color: rgba(255, 255, 255, 0.1);
         }
-      }
-    }
-  </script>
-  <style>
-    /* Custom styles that complement Tailwind */
-    .text-gradient {
-      background: linear-gradient(90deg, #3385FF, #00D1FF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px -5px rgba(0, 102, 255, 0.3);
-    }
-    
-    .nav-link {
-      position: relative;
-    }
-    
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #3385FF;
-      transition: width 0.3s ease;
-    }
-    
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    
-    /* Smooth scroll behavior */
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-  
 
-  <!-- Structured Data - Person -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Nudam Kethaka",
-    "url": "https://yourdomain.com",
-    "image": "https://yourdomain.com/image/My Photo.png",
-    "jobTitle": "Graphic Designer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Nudam Design Studio"
-    },
-    "description": "Professional graphic designer specializing in brand identity, visual storytelling, and digital design.",
-    "sameAs": [
-      "https://instagram.com/nudamkethaka",
-      "https://twitter.com/nudamkethaka",
-      "https://linkedin.com/in/nudamkethaka"
-    ]
-  }
-  </script>
-  <!-- Structured Data - Services -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Graphic Design Services",
-    "provider": {
-      "@type": "Person",
-      "name": "Nudam Kethaka"
-    },
-    "areaServed": "New York",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Design Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Brand Identity Design"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Video Editing"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Logo Design"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "3D Modeling"
-          }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+            cursor: none;
         }
-      ]
-    }
-  }
-  </script>
+
+        /* --- 2. Custom Cursor --- */
+        .cursor-dot, .cursor-outline {
+            position: fixed; top: 0; left: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none; z-index: 9999; border-radius: 50%;
+        }
+        .cursor-dot { width: 8px; height: 8px; background-color: var(--text-color); transition: width 0.3s, height 0.3s; }
+        .cursor-outline {
+            width: 40px; height: 40px; border: 2px solid var(--text-color);
+            opacity: 0.5; transition: all 0.2s ease-out;
+        }
+        .cursor-outline.hover { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+
+        /* --- 3. Layout & General Styling --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+        section { padding: 120px 0; overflow: hidden; }
+        h1, h2, h3 { font-weight: 700; }
+        h2 {
+            font-size: 3rem; text-align: center; margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .section-subtitle {
+            text-align: center; max-width: 700px; margin: 0 auto 80px;
+            color: rgba(240, 240, 240, 0.8);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .btn {
+            display: inline-block; padding: 12px 28px;
+            background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+            color: white; text-decoration: none; font-weight: 600; border-radius: 50px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(34, 211, 238, 0.3);
+        }
+
+        /* --- 4. Section Specific Styling --- */
+
+        /* Header */
+        .main-header {
+            position: fixed; top: 0; left: 0;
+            width: 100%; z-index: 1000; padding: 20px 0;
+            background: rgba(17, 17, 17, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 900; text-decoration: none; color: var(--text-color); }
+        .nav-links a {
+            color: var(--text-color); text-decoration: none; margin-left: 16px;
+            font-weight: 400; position: relative; padding-bottom: 5px; font-size: 0.8rem;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* Hero Section */
+        #hero { height: 100vh; display: flex; align-items: center; text-align: center; position: relative; }
+        #hero::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15), transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.15), transparent 40%);
+            animation: pulse 10s ease-in-out infinite;
+            z-index: 1;
+        }
+        #hero .container { position: relative; z-index: 2; }
+        #hero h1 { font-size: 5rem; font-weight: 900; line-height: 1.1; margin-bottom: 10px; letter-spacing: -2px; }
+        #hero .hero-subtitle { font-size: 1.8rem; font-weight: 300; margin-bottom: 30px; color: rgba(240, 240, 240, 0.8); }
+        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+
+        /* Client Logos Section */
+        #clients {
+            padding: 60px 0;
+            background-color: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        #clients h3 {
+            text-align: center;
+            font-weight: 400;
+            font-size: 1rem;
+            color: rgba(240, 240, 240, 0.6);
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+        .logo-scroller { max-width: 100%; margin: 0 auto; overflow: hidden; -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); }
+        .logo-scroller-inner { display: flex; gap: 5rem; width: max-content; flex-wrap: nowrap; animation: scroll 60s linear infinite; }
+        .logo-scroller-inner img { height: 35px; max-height: 35px; width: auto; filter: grayscale(1) brightness(1.5); opacity: 0.8; transition: filter 0.3s, opacity 0.3s; }
+        .logo-scroller:hover .logo-scroller-inner { animation-play-state: paused; }
+        .logo-scroller-inner img:hover { filter: grayscale(0) brightness(1); opacity: 1; }
+        @keyframes scroll { to { transform: translate(calc(-50% - 2.5rem)); } }
+
+        /* About Section */
+        #about .container { display: flex; align-items: center; gap: 60px; }
+        #about .about-content { flex: 2; }
+        #about .about-content p { margin-bottom: 15px; color: rgba(240, 240, 240, 0.8); }
+        #about .skills-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        #about .skills-list li {
+            background-color: var(--card-color); padding: 8px 15px; border-radius: 20px;
+            font-size: 0.9rem; border: 1px solid var(--border-color);
+        }
+        #about .about-image { flex: 1; max-width: 350px; }
+        #about .about-image img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); border: 2px solid var(--border-color); }
+
+        /* Generic Card Grid */
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .grid-card {
+            background: var(--card-color); border-radius: 15px; overflow: hidden;
+            border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .grid-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .card-image-wrapper { position: relative; overflow: hidden; }
+        .grid-card img {
+            width: 100%; height: 250px; object-fit: cover; display: block;
+            transition: transform 0.3s ease;
+        }
+        .grid-card:hover img { transform: scale(1.05); }
+        .card-content { padding: 25px; }
+        .grid-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .grid-card p { font-size: 0.95rem; color: rgba(240, 240, 240, 0.7); }
+
+        /* Services Card */
+        .service-card-tag {
+            position: absolute; top: 15px; right: 15px; background-color: var(--accent-blue);
+            color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+        }
+        .service-card .card-content p { margin-bottom: 20px; }
+        .service-card a { color: var(--accent-blue); text-decoration: none; font-weight: 600; transition: letter-spacing 0.3s ease; }
+        .service-card a:hover { letter-spacing: 0.5px; }
+
+        /* Work Experience Section */
+        .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 3px; background: var(--border-color); top: 0; bottom: 0; left: 50%; margin-left: -1.5px; }
+        .timeline-container { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-container.left { left: 0; }
+        .timeline-container.right { left: 50%; }
+        .timeline-container::after {
+            content: ''; position: absolute; width: 20px; height: 20px; right: -10px;
+            background-color: var(--bg-color); border: 4px solid var(--accent-blue);
+            top: 25px; border-radius: 50%; z-index: 1;
+        }
+        .timeline-container.right::after { left: -10px; }
+        .timeline-content { padding: 25px; background: var(--card-color); position: relative; border-radius: 15px; border: 1px solid var(--border-color); }
+        .timeline-content h3 { font-size: 1.4rem; color: var(--accent-blue); }
+        .timeline-content .company { font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; }
+        .timeline-content .date { font-size: 0.9rem; color: rgba(240,240,240,0.5); margin-bottom: 15px; }
+        .timeline-content ul { list-style-type: none; padding-left: 0; }
+        .timeline-content ul li { position: relative; padding-left: 20px; font-size: 0.95rem; color: rgba(240,240,240,0.8); margin-bottom: 5px; }
+        .timeline-content ul li::before { content: '›'; position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: 900; }
+
+        /* Skills & Education Section */
+        .skills-education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+        .skills-column h3, .education-column h3 { font-size: 1.8rem; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; }
+        .skills-column h3 svg, .education-column h3 svg { width: 28px; height: 28px; fill: var(--accent-blue); }
+        .skill-item { margin-bottom: 25px; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
+        .skill-bar { width: 100%; height: 8px; background-color: var(--card-color); border-radius: 4px; overflow: hidden; }
+        .skill-level { height: 100%; background: var(--accent-blue); border-radius: 4px; width: 0; transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); }
+        .education-list { list-style: none; }
+        .education-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+        .education-item svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 5px; fill: var(--accent-blue); }
+        
+        /* Testimonials Section */
+        .testimonial-card { padding: 35px; position: relative; }
+        .testimonial-card .quote-icon { position: absolute; top: -10px; left: 15px; font-size: 5rem; color: var(--accent-blue); opacity: 0.1; font-weight: 900; line-height: 1; }
+        .testimonial-card blockquote { border: none; padding: 0; margin: 0 0 20px 0; font-style: italic; font-size: 1.05rem; color: rgba(240,240,240,0.9); }
+        .client-info { text-align: right; }
+        .client-info .name { display: block; font-weight: 700; color: var(--text-color); }
+        .client-info .title { font-size: 0.9rem; color: rgba(240,240,240,0.6); }
+
+        /* Contact & Footer */
+        #contact { text-align: center; }
+        #contact p { max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: rgba(240, 240, 240, 0.8); }
+        footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--border-color); color: rgba(240, 240, 240, 0.5); }
+
+        /* --- 5. Animations & Responsiveness --- */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            #hero h1 { font-size: 3rem; }
+            #hero .hero-subtitle { font-size: 1.2rem; }
+            section { padding: 80px 0; }
+            .container { padding: 0 20px; }
+            #about .container { flex-direction: column-reverse; text-align: center; }
+            #about .about-image { margin-bottom: 30px; max-width: 250px; }
+            #about .skills-list { justify-content: center; }
+            .timeline::after { left: 20px; }
+            .timeline-container { width: 100%; padding-left: 55px; padding-right: 15px; }
+            .timeline-container.left, .timeline-container.right { left: 0%; }
+            .timeline-container::after { left: 10px; }
+            .skills-education-grid { grid-template-columns: 1fr; gap: 60px;}
+        }
+    </style>
 </head>
+<body>
 
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-<body class="bg-gray-900 text-white font-body overflow-x-hidden">
-  <!-- Navigation -->
-  <header class="fixed w-full top-0 z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
-    <div class="container mx-auto p-4">
-      <div class="flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-display font-bold tracking-tight flex items-center">
-          <span class="text-gradient">NUDAM</span><span class="text-white ml-1"> .</span>
-        </a>
-        <nav class="hidden md:flex space-x-6 text-sm uppercase tracking-wider">
-          <a href="index.html" class="nav-link hover:text-primary-400">Home</a>
-          <a href="portfolio.html" class="nav-link hover:text-primary-400">Portfolio</a>
-          <a href="thoughts.html" class="nav-link hover:text-primary-400">Thoughts</a>
-          <a href="about.html" class="nav-link hover:text-primary-400">About</a>
-          <a href="contact.html" class="nav-link hover:text-primary-400">Contact</a>
-        </nav>
-        <button id="mobileMenuBtn" class="md:hidden text-2xl">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden w-full bg-gray-800 border-t border-gray-700">
-      <div class="container mx-auto py-4 px-6 flex flex-col space-y-4">
-        <a href="index.html" class="py-2 hover:text-primary-400">Home</a>
-        <a href="portfolio.html" class="py-2 hover:text-primary-400">Portfolio</a>
-        <a href="thoughts.html" class="py-2 hover:text-primary-400">Thoughts</a>
-        <a href="about.html" class="py-2 hover:text-primary-400">About</a>
-        <a href="contact.html" class="py-2 hover:text-primary-400">Contact</a>
-      </div>
-    </div>
-  </header>
-
-<!-- Page Wrapper -->
-<div class="relative w-full min-h-screen">
-
-  <!-- 🔹 Hero Section -->
-  <section class="relative position-fix h-auto w-full overflow-hidden">
-    <video autoplay loop muted playsinline class="absolute top-0 left-0 bottom-50 w-auto h-auto object-contain z-0">
-      <source src="#">
-    </video>
-
-    <!-- Optional dark overlay -->
-    
-
-
-<!-- Hero Section with Image Slideshow -->
-<section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pb-20 relative pt-24">
-  <!-- Slideshow Container -->
-  <div class="absolute inset-0 z-0 overflow-hidden">
-    <div class="slideshow-container">
-      <!-- Images will be inserted here via JavaScript -->
-    </div>
-    <!-- Dark overlay for better text readability -->
-    <div class="absolute inset-0 bg-black bg-opacity-85 z-10"></div>
-  </div>
-
-  <!-- Hero Content -->
-  <div class="animate-fadeInUp relative z-20">
-    <h2 class="text-5xl md:text-6xl font-extrabold font-display text-gradient">
-      Accelerate Your Company's Success</h2><br>
-
-    <div class="text-2xl text-gray-200 text-center max-w-4xl mx-auto leading-relaxed font-light">
-      <p>Fuel your business growth with <span class="text-blue-400 font-medium">our prestigious bundle of digital marketing solutions.</span>
-        We offer a comprehensive spectrum of tailored strategies for both <span class="text-blue-400 font-medium">print and digital media.</span>
-        Our proven expertise ensures you outpace competitors and achieve measurable results.</p>
-    </div>
-
-    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-      <br>
-      Focused on timeless design, clear messaging, and powerful visuals. Welcome to my digital portfolio and personal journal.
-    </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="portfolio.html" class="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
-        <span>Explore My Work</span>
-        <i class="fas fa-arrow-right ml-2"></i>
-      </a>
-      <a href="contact.html" class="inline-block bg-transparent border border-primary-500 text-primary-400 hover:bg-primary-500/10 px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
-        <span>Get in Touch</span>
-        <i class="fas fa-envelope ml-2"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Scroll Indicator -->
-  <div class="absolute bottom-10 flex flex-col items-center z-20">
-    <div class="text-sm text-gray-400 mb-2">Scroll Down</div>
-    <div id="scrollBall" class="w-5 h-5 bg-primary-400 rounded-full animate-bounce"></div>
-  </div>
-</section>
-
-<!-- Add this to your existing <style> section in the head -->
-<style>
-  /* Slideshow styles */
-  .slideshow-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slideshow-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  .slideshow-container img.active {
-    opacity: 1;
-  }
-</style>
-
-<!-- Add this to your existing JavaScript section before the closing </body> tag -->
-<script>
-  // Slideshow functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    // Array of image paths - replace these with your actual image paths
-    const images = [
-      'https://ik.imagekit.io/kvtr2cjd2c/manasa%20ashramaya/manasa-coverphoto.jpg?updatedAt=1748250816469',
-      'https://ik.imagekit.io/kvtr2cjd2c/Api%20Denna/469542593_122148850982339416_1942332988769388989_n.jpg?updatedAt=1747697377588',
-      'https://ik.imagekit.io/kvtr2cjd2c/AITECH/AITECH-Work.jpg?updatedAt=1748251435900',
-      'https://ik.imagekit.io/kvtr2cjd2c/Oushani/Oushani-Work.jpg?updatedAt=1748251706011'
-    
-    ];
-    
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    
-    // Create image elements
-    images.forEach((src, index) => {
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = 'Portfolio Showcase Image';
-      img.className = index === 0 ? 'active' : '';
-      slideshowContainer.appendChild(img);
-    });
-    
-    // Set up automatic slideshow
-    let currentSlide = 0;
-    const slides = slideshowContainer.querySelectorAll('img');
-    
-    function showNextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-    
-    // Change slide every 5 seconds
-    setInterval(showNextSlide, 5000);
-  });
-</script>
-
-  <!-- About Me Section -->
-  <section id="about" class="px-6 py-20 max-w-6xl mx-auto border-t border-gray-800">
-    <div class="flex flex-col md:flex-row gap-12 items-center">
-      <div class="md:w-1/2">
-        <img src="https://ik.imagekit.io/kvtr2cjd2c/My%20Photo.png?updatedAt=1747695924076" alt="Nudam Kethaka" class="rounded-xl shadow-lg w-full h-auto max-w-md mx-auto">
-      </div>
-      <div class="md:w-1/2">
-        <h3 class="text-3xl font-bold mb-6 text-primary-40">About Me</h3>
-        <p class="text-primary-50 mb-4">
-          Specializing in brand identity Videography, Videoediting and  Design, We blend technical precision with creative innovation.work prioritizes both aesthetic impact and strategic communication, delivering visual solutions that engage audiences and drive business results.
-        </p>
-        <p class="text-gray-50 mb-6"> 
-Our approach on each project with energy and precision, believing that thoughtful design can transform the audience engaged with information. 
-We excited to bring our creative problem-solving skills. <br><br>
-Our Expertism and industry-standards usage of latest design software together with meticulous attention to detail thrives creating impactful designs that serve both creative vision and business objectives.
-
-        </p>
-        <div class="flex flex-wrap gap-3 mb-8">
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Logo Design</span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Poster Design</span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Video Editing</span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Invitation Card Design</span>
-          <span class="bg-gray-800 px-3 py-1 rounded-full text-xs">Motion Graphics</span>
-          
+    <header class="main-header">
+        <div class="container">
+            <a href="#hero" class="logo">N<span class="gradient-text">K</span>.</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#clients">Clients</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills-education">Skills</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <a href="about.html" class="inline-flex items-center text-primary-400 hover:text-primary-300">
-          <span> More Details About Me </span>
-          <i class="fas fa-long-arrow-alt-right ml-2"></i>
-        </a>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Featured Projects Section -->
-  <section id="projects" class="px-6 py-20 max-w-6xl mx-auto border-t border-gray-800">
-    <h3 class="text-3xl font-bold mb-4 text-center">Our Services</h3>
-    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">Specialized in logo design, brand identity design, Invitation Card Design, Videographer ,Video editing, 3D Modeling and Illustration.</p>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Project Card 1 -->
-      <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-        <div class="relative">
-          <img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(31).jpg?updatedAt=1747695884303" 
-              alt="Brand Identity" class="w-full h-64 object-cover">
-          <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
-          Web Poster
-          </div>
+    <section id="hero">
+        <div class="container">
+            <h1 class="fade-in"><span class="gradient-text">Nudam Kethaka</span></h1>
+            <p class="hero-subtitle fade-in" style="transition-delay: 0.2s;">Graphic Designer & Videographer from Sri Lanka</p>
+            <a href="#services" class="btn fade-in" style="transition-delay: 0.4s;">See My Work</a>
         </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Graphic Design</h4>
-          <p class="text-gray-400 text-sm mb-4">Crafted a minimalist yet impactful logo and cohesive visual identity for a sustainable lifestyle brand, reflecting eco-conscious values through clean typography and organic motifs.</p>
-          <a href="portfolio.html" class="inline-flex items-center text-primary-400 hover:text-primary-300 text-sm">
-            <span>View Project</span>
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
+    </section>
 
-      <!-- Project Card 2 -->
-      <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-        <div class="relative">
-          <img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(20).jpg?updatedAt=1747695884704" 
-              alt="Poster Design" class="w-full h-64 object-cover">
-          <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
-            Print Design
-          </div>
+    <section id="clients">
+        <div class="container">
+            <h3 class="fade-in">TRUSTED BY WORLD-CLASS BRANDS</h3>
         </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Video Editing</h4>
-          <p class="text-gray-400 text-sm mb-4">Created bold, geometric typographic posters for an art exhibition, merging dynamic layouts with expressive type to evoke the event’s avant-garde theme. </p>
-          <a href="portfolio.html" class="">
-            <span class="inline-flex items-center text-primary-400 hover:text-primary-300 text-sm">
-              <span>View Project</span>
-              <i class="fas fa-arrow-right ml-2"></i>
-            </span>
-
-          </a>
-        </div>
-      </div>
-
-      <!-- Project Card 3 -->
-      <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-        <div class="relative">
-          <img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(20).jpg?updatedAt=1747695884704" 
-              alt="Web Design" class="w-full h-64 object-cover">
-          <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
-            Videographer
-          </div>
-        </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Videographer</h4>
-          <p class="text-gray-400 text-sm mb-4">Designed an intuitive, modern interface for a nonprofit’s videography platform, enhancing usability with streamlined navigation and visually engaging interactive elements.</p>
-          <a href="portfolio.html" class="inline-flex items-center text-primary-400 hover:text-primary-300 text-sm">
-            <span>View Project</span>
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project Card 4 -->
-      <div class="bg-gray-800 rounded-xl overflow-hidden card-hover">
-        <div class="relative">
-          <img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(18).jpg?updatedAt=1747695884472" 
-              alt="Packaging Design" class="w-full h-64 object-cover">
-          <div class="absolute top-4 right-4 bg-primary-500 text-white text-xs py-1 px-3 rounded-full">
-            Packaging
-          </div>
-        </div>
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">3D Modeling</h4>
-          <p class="text-gray-400 text-sm mb-4">Developed eco-friendly coffee packaging using earthy tones and minimalist 3D-rendered visuals, aligning with sustainable design practices and shelf appeal.</p>
-          <a href="portfolio.html" class="inline-flex items-center text-primary-400 hover:text-primary-300 text-sm">
-            <span>View Project</span>
-            <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-12">
-      <a href="portfolio.html" class="inline-block bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg text-sm tracking-wide transition">
-        View All Projects
-      </a>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="px-6 py-20 max-w-6xl mx-auto border-t border-gray-800">
-    <h3 class="text-3xl font-bold mb-4 text-center">Client Testimonials</h3>
-    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">What clients have to say about working together.</p>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- Testimonial 1 -->
-      <div class="bg-gray-800 rounded-xl p-6 relative">
-        <i class="fas fa-quote-left text-primary-500/20 text-4xl absolute top-4 left-4"></i>
-        <div class="ml-6 mt-6">
-          <p class="text-gray-300 italic mb-6">
-            "Nudam transformed our brand identity completely. The designs were not only beautiful but perfectly captured our company's values and mission. Highly recommend!"
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-              <img src="https://ik.imagekit.io/kvtr2cjd2c/408486581_3506533066267534_1552047041235510057_n.jpg?updatedAt=1747700645342" alt="Client" class="w-full h-full object-cover">
+        <div class="logo-scroller fade-in">
+            <div class="logo-scroller-inner">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_logo_%282012%29.svg" alt="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Adobe_Corporate_logo.svg" alt="Adobe"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Shopify_logo_2018.svg" alt="Shopify"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Figma-logo.svg" alt="Figma">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_logo_%282012%29.svg" alt="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Adobe_Corporate_logo.svg" alt="Adobe"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Shopify_logo_2018.svg" alt="Shopify"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Figma-logo.svg" alt="Figma">
             </div>
-            <div>
-              <h5 class="font-medium">Samitha Perera</h5>
-              <p class="text-gray-400 text-sm">Creative Director</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <h2>About Me</h2>
+                <p>Specializing in brand identity Videography, Videoediting and Design, I blend technical precision with creative innovation. My work prioritizes both aesthetic impact and strategic communication, delivering visual solutions that engage audiences and drive business results.</p>
+                <p>My approach on each project with energy and precision, believing that thoughtful design can transform the audience engaged with information. I'm excited to bring our creative problem-solving skills.</p>
+                <ul class="skills-list"><li>Logo Design</li> <li>Poster Design</li> <li>Video Editing</li> <li>Invitation Card Design</li> <li>Motion Graphics</li></ul>
             </div>
-          </div>
+            <div class="about-image fade-in" style="transition-delay: 0.2s;"><img src="https://ik.imagekit.io/kvtr2cjd2c/My%20Photo.png?updatedAt=1747695924076" alt="A photo of Nudam Kethaka"></div>
         </div>
-      </div>
+    </section>
 
-      <!-- Testimonial 2 -->
-      <div class="bg-gray-800 rounded-xl p-6 relative">
-        <i class="fas fa-quote-left text-primary-500/20 text-4xl absolute top-4 left-4"></i>
-        <div class="ml-6 mt-6">
-          <p class="text-gray-300 italic mb-6">
-            "Working with Nudam was a pleasure. The attention to detail and the strategic thinking behind each design decision really helped our campaign stand out in a crowded market."
-          </p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-              <img src="https://ik.imagekit.io/kvtr2cjd2c/455089253_8124687050920167_7836657884259695293_n.jpg?updatedAt=1747695882514">
+    <section id="services">
+        <div class="container">
+            <h2 class="fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Specialized in logo design, brand identity design, Invitation Card Design, Videographer, Video editing, 3D Modeling and Illustration.</p>
+            <div class="card-grid">
+                <div class="grid-card service-card fade-in"><div class="card-image-wrapper"><img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(31).jpg?updatedAt=1747695884303" alt="Graphic Design Project"><div class="service-card-tag">Web Poster</div></div><div class="card-content"><h3>Graphic Design</h3><p>Crafted a minimalist yet impactful logo and cohesive visual identity for a sustainable lifestyle brand, reflecting eco-conscious values through clean typography and organic motifs.</p><a href="#">View Project →</a></div></div>
+                <div class="grid-card service-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(20).jpg?updatedAt=1747695884704" alt="Video Editing Project"><div class="service-card-tag">Print Design</div></div><div class="card-content"><h3>Video Editing</h3><p>Created bold, geometric typographic posters for an art exhibition, merging dynamic layouts with expressive type to evoke the event's avant-garde theme.</p><a href="#">View Project →</a></div></div>
+                <div class="grid-card service-card fade-in" style="transition-delay: 0.2s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/2058130/pexels-photo-2058130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Videographer Project"><div class="service-card-tag">Videographer</div></div><div class="card-content"><h3>Videographer</h3><p>Designed an intuitive, modern interface for a nonprofit's videography platform, enhancing usability with streamlined navigation and visually engaging interactive elements.</p><a href="#">View Project →</a></div></div>
+                <div class="grid-card service-card fade-in" style="transition-delay: 0.3s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/8350410/pexels-photo-8350410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI Video Project"><div class="service-card-tag">AI Creation</div></div><div class="card-content"><h3>AI Ads & AI Video</h3><p>Leveraging cutting-edge AI to create highly-targeted ad campaigns and generate unique video content at scale for maximum impact.</p><a href="#">View Project →</a></div></div>
+                <div class="grid-card service-card fade-in"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Social Media Handling"><div class="service-card-tag">Management</div></div><div class="card-content"><h3>Social Media Handling</h3><p>Managing and growing your social media presence with curated content, community engagement, and strategic campaigns.</p><a href="#">View Project →</a></div></div>
+                <div class="grid-card service-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/7175591/pexels-photo-7175591.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="3D Modeling Project"><div class="service-card-tag">Packaging</div></div><div class="card-content"><h3>3D Modeling</h3><p>Developed eco-friendly coffee packaging using earthy tones and minimalist 3D-rendered visuals, aligning with sustainable design practices and shelf appeal.</p><a href="#">View Project →</a></div></div>
             </div>
-            <div>
-              <h5 class="font-medium">Ravi De SILVA</h5>
-              <p class="text-gray-400 text-sm">Company Owner</p>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact CTA Section -->
-  <section class="px-6 py-20 max-w-4xl mx-auto text-center">
-    <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-800">
-      <h3 class="text-3xl font-bold mb-4">Get in touch? Let’s talk</h3>
-      <p class="text-gray-400 max-w-xl mx-auto mb-8">
-        Let's create something amazing together. Reach out to discuss your project needs, timeline, and vision.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="contact.html" class="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
-          <span>Contact Me</span>
-          <i class="fas fa-paper-plane ml-2"></i>
-        </a>
-        <a href="mailto:nudam@example.com" class="inline-block bg-transparent border border-primary-500 text-primary-400 hover:bg-primary-500/10 px-6 py-3 rounded-lg text-sm tracking-wide transition flex items-center justify-center">
-          <span>nudamkethaka@gmail.com</span>
-          <i class="fas fa-envelope ml-2"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 mt-12 p-8 border-t border-gray-700">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Brand Column -->
-        <div class="md:col-span-1">
-          <h2 class="text-2xl font-display font-bold tracking-tight mb-4">
-            <span class="text-gradient">NUDAM</span><span class="text-white">.</span>
-          </h2>
-          <p class="text-gray-400 text-sm mb-4">
-            Graphic designer specialized in brand identity, digital design, and visual storytelling.
-          </p>
-          <div class="flex space-x-4 text-gray-400">
-            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-instagram text-lg"></i></a>
-            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-twitter text-lg"></i></a>
-            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-behance text-lg"></i></a>
-            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-dribbble text-lg"></i></a>
-            <a href="#" class="hover:text-primary-400 transition"><i class="fab fa-linkedin-in text-lg"></i></a>
-          </div>
-        </div>
-        
-        <!-- Quick Links -->
-        <div class="md:col-span-1">
-          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h5>
-          <ul class="space-y-2 text-sm text-gray-300">
-            <li><a href="index.html" class="hover:text-primary-400 transition">Home</a></li>
-            <li><a href="portfolio.html" class="hover:text-primary-400 transition">Portfolio</a></li>
-            <li><a href="thoughts.html" class="hover:text-primary-400 transition">Thoughts</a></li>
-            <li><a href="about.html" class="hover:text-primary-400 transition">About</a></li>
-            <li><a href="contact.html" class="hover:text-primary-400 transition">Contact</a></li>
-          </ul>
-        </div>
-        
-        <!-- Services -->
-        <div class="md:col-span-1">
-          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Services</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="#" class="hover:text-primary-400 transition">Brand Identity</a></li>
-            <li><a href="#" class="hover:text-primary-400 transition">UI/UX Design</a></li>
-            <li><a href="#" class="hover:text-primary-400 transition">Print Design</a></li>
-            <li><a href="#" class="hover:text-primary-400 transition">Packaging</a></li>
-            <li><a href="#" class="hover:text-primary-400 transition">Motion Graphics</a></li>
-          </ul>
-        </div>
-        
-        <!-- Contact Info -->
-        <div class="md:col-span-1">
-          <h5 class="font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h5>
-          <ul class="space-y-2 text-sm text-gray-400">
-            <li class="flex items-start">
-              <i class="fas fa-envelope mt-1 mr-2 text-primary-400"></i>
-              <a href="mailto:nudam@example.com" class="hover:text-primary-400 transition">nudam@example.com</a>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-phone-alt mt-1 mr-2 text-primary-400"></i>
-              <a href="tel:+1234567890" class="hover:text-primary-400 transition">+1 (234) 567-890</a>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-400"></i>
-              <span>New York City, USA</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-300 text-sm">&copy; 2025 Nudam Kethaka. All rights reserved.</p>
-        <div class="mt-4 md:mt-0">
-          <a href="#" class="text-xs text-gray-500 hover:text-gray-300 mx-2">Privacy Policy</a>
-          <a href="#" class="text-xs text-gray-500 hover:text-gray-300 mx-2">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.toggle('hidden');
-      // Toggle icon
-      const icon = this.querySelector('i');
-      if (icon.classList.contains('fa-bars')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-      } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
-      }
-    });
-
-    // Scroll animations
-    document.addEventListener('scroll', () => {
-      const scrollBall = document.getElementById('scrollBall');
-      const scrollY = window.scrollY;
-      
-      // Hide scroll indicator when user scrolls down
-      if (scrollY > 200) {
-        scrollBall.parentElement.style.opacity = '0';
-      } else {
-        scrollBall.parentElement.style.opacity = '1';
-      }
-      
-      // Animate elements when they enter viewport
-      const animateElements = document.querySelectorAll('.card-hover');
-      animateElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight * 0.8) {
-          element.style.opacity = '1';
-        }
-      });
-    });
+    </section>
     
-    // Initialize card hover animations
-    document.querySelectorAll('.card-hover').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transition = 'opacity 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease';
-    });
-  </script>
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="fade-in">My Portfolio</h2>
+            <div class="card-grid">
+                <div class="grid-card portfolio-card fade-in"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/38544/imac-apple-mockup-app-38544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 1"></div><div class="card-content"><h3>Modern Brand Identity</h3><p>A complete visual system for a tech startup, from logo to social media templates.</p></div></div>
+                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 2"></div><div class="card-content"><h3>Event Poster Series</h3><p>Vibrant and dynamic posters designed for a local music festival.</p></div></div>
+                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.2s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 3"></div><div class="card-content"><h3>Product Packaging</h3><p>Elegant and minimalist packaging design for a luxury cosmetics brand.</p></div></div>
+                <div class="grid-card portfolio-card fade-in"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 4"></div><div class="card-content"><h3>Social Media Campaign</h3><p>Engaging video ads and graphics for a major social media marketing campaign.</p></div></div>
+                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 5"></div><div class="card-content"><h3>Animated Logo</h3><p>A fluid and modern logo animation for a digital agency's intro sequence.</p></div></div>
+                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.2s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/2451264/pexels-photo-2451264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 6"></div><div class="card-content"><h3>Book Cover Design</h3><p>A compelling and thematic cover design for a best-selling science fiction novel.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="fade-in">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-container left fade-in"><div class="timeline-content"><h3>Intern Graphic Designer</h3><p class="company">Transco Digital</p><p class="date">2025 - Present</p><ul><li>Graphic Design</li><li>Video Editing</li><li>AI Video Generation</li></ul></div></div>
+                <div class="timeline-container right fade-in"><div class="timeline-content"><h3>Freelance Graphic Designer</h3><p class="company">The Management Co Intl</p><p class="date">2025 - Present</p><ul><li>Videographer</li><li>Video Editing</li><li>Social Media Handling</li></ul></div></div>
+                <div class="timeline-container left fade-in"><div class="timeline-content"><h3>Freelance Graphic Designer</h3><p class="company">Rich Business Solutions</p><p class="date">2024 - 2025</p><ul><li>Post Design</li><li>Logo Design</li></ul></div></div>
+                <div class="timeline-container right fade-in"><div class="timeline-content"><h3>Intern Graphic Designer</h3><p class="company">AITECH</p><p class="date">2024 - 2025</p><ul><li>Post Design</li><li>Video Editor</li><li>Photo Editor</li></ul></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills-education">
+        <div class="container">
+            <h2 class="fade-in">Skills & Education</h2>
+            <div class="skills-education-grid">
+                <div class="skills-column fade-in">
+                    <h3><svg viewBox="0 0 24 24"><path d="M20.4 13.2L12 21.6l-8.4-8.4L12 3.6l8.4 9.6zM12 1.2L1.2 12 12 22.8 22.8 12 12 1.2z" fill="currentColor"></path></svg>Skills</h3>
+                    <div class="skill-item"><div class="skill-info"><span>Adobe Photoshop</span><span>90%</span></div><div class="skill-bar"><div class="skill-level" data-level="90"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span>Adobe Illustrator</span><span>80%</span></div><div class="skill-bar"><div class="skill-level" data-level="80"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span>Adobe InDesign</span><span>50%</span></div><div class="skill-bar"><div class="skill-level" data-level="50"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span>Davinci Resolve</span><span>70%</span></div><div class="skill-bar"><div class="skill-level" data-level="70"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span>Autodesk Maya</span><span>10%</span></div><div class="skill-bar"><div class="skill-level" data-level="10"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span>Videographer</span><span>50%</span></div><div class="skill-bar"><div class="skill-level" data-level="50"></div></div></div>
+                    <div class="skill-item"><div class="skill-info"><span>AI Ads & AI Video</span><span>30%</span></div><div class="skill-bar"><div class="skill-level" data-level="30"></div></div></div>
+                </div>
+                <div class="education-column fade-in" style="transition-delay: 0.2s;">
+                    <h3><svg viewBox="0 0 24 24"><path d="M18 7.5h-2V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2.5H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM10 5h4v2.5h-4V5zm8 14H6v-9h12v9z" fill="currentColor"></path></svg>Education</h3>
+                    <ul class="education-list">
+                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design NVQ 4 National Youth Services Council, Maharagama - (6 months)</div></li>
+                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design NVQ 5 Sri Lanka Institute of Printing, Borella</div></li>
+                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design Type Settings Sri Lanka Institute of Printing, Borella.</div></li>
+                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design Animation Sri Lanka Institute of Printing, Borella</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="fade-in">Client Testimonials</h2>
+            <p class="section-subtitle fade-in">What my clients say about my work.</p>
+            <div class="card-grid">
+                <div class="grid-card testimonial-card fade-in"><div class="quote-icon">”</div><blockquote>Nudam's creativity and attention to detail are second to none. He took our initial concept and transformed it into a brand identity that exceeded all our expectations. A true professional and a pleasure to work with.</blockquote><div class="client-info"><span class="name">Jane Doe</span><span class="title">Marketing Manager, TechCorp</span></div></div>
+                <div class="grid-card testimonial-card fade-in" style="transition-delay: 0.2s;"><div class="quote-icon">”</div><blockquote>Working with Nudam was a game-changer for our launch. The videos he produced were not only visually stunning but also delivered incredible results for our campaign. Fast, communicative, and incredibly talented.</blockquote><div class="client-info"><span class="name">John Smith</span><span class="title">Founder, Innovate Startups</span></div></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container fade-in">
+            <h2>Get In Touch</h2>
+            <p>I'm available for freelance projects. If you have a project in mind or just want to say hello, feel free to reach out. Let's create something amazing together!</p>
+            <a href="mailto:your.email@example.com" class="btn">Say Hello</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Nudam Kethaka. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- 1. Custom Cursor Logic ---
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            const interactiveElements = document.querySelectorAll('a, button, .grid-card');
+
+            window.addEventListener('mousemove', function(e) {
+                cursorDot.style.left = `${e.clientX}px`;
+                cursorDot.style.top = `${e.clientY}px`;
+                cursorOutline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
+            });
+
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => cursorOutline.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hover'));
+            });
+
+            // --- 2. Scroll Animation Logic (Intersection Observer) ---
+            const fadeElems = document.querySelectorAll('.fade-in');
+            const skillLevels = document.querySelectorAll('.skill-level');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        if (entry.target.classList.contains('skills-column')) {
+                            skillLevels.forEach(skill => {
+                                const level = skill.getAttribute('data-level');
+                                skill.style.width = level + '%';
+                            });
+                        }
+                        
+                        if (!entry.target.classList.contains('timeline-container')) {
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            fadeElems.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
