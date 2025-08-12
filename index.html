@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nudam Kethaka - Professional Graphic Designer & Videographer specializing in brand identity, video editing, and digital design services.">
+    <meta name="keywords" content="graphic designer, videographer, video editing, brand identity, logo design, motion graphics, 3D modeling">
+    <meta name="author" content="Nudam Kethaka">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nudam Kethaka | Graphic Designer & Videographer">
+    <meta property="og:description" content="Professional Graphic Designer & Videographer specializing in brand identity, video editing, and digital design services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nudamkethaka.com">
+    <meta property="og:image" content="https://ik.imagekit.io/kvtr2cjd2c/NK%20logo%20C.png?updatedAt=1755020669155">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nudam Kethaka | Graphic Designer & Videographer">
+    <meta name="twitter:description" content="Professional Graphic Designer & Videographer specializing in brand identity, video editing, and digital design services.">
+    <meta name="twitter:image" content="https://ik.imagekit.io/kvtr2cjd2c/NK%20logo%20C.png?updatedAt=1755020669155">
+    
     <title>Nudam Kethaka | Graphic Designer & Videographer</title>
+    
     <!-- Favicon (ICO format) -->
     <link rel="icon" href="https://ik.imagekit.io/kvtr2cjd2c/NK%20logo%20C.png?updatedAt=1755020669155" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://ik.imagekit.io/kvtr2cjd2c/NK%20logo%20C.png?updatedAt=1755020669155">
     
+    <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://ik.imagekit.io">
+    <link rel="preconnect" href="https://images.pexels.com">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         /* ------------------- */
         /* --- CSS STYLING --- */
         /* ------------------- */
-
         /* --- 1. Global & Root Variables (BLUE THEME) --- */
         :root {
             --bg-color: #0d0d0d;
@@ -25,10 +49,16 @@
             --accent-blue: #3b82f6;        /* Consistent Blue Accent */
             --card-color: #1a1a1a;
             --border-color: rgba(255, 255, 255, 0.1);
+            --success-color: #10b981;
+            --error-color: #ef4444;
         }
-
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        
+        html { 
+            scroll-behavior: smooth; 
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
@@ -37,37 +67,69 @@
             overflow-x: hidden;
             cursor: none;
         }
-
+        
+        /* Skip to content link for accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent-blue);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        
+        .skip-to-content:focus {
+            top: 0;
+        }
+        
         /* --- 2. Custom Cursor --- */
         .cursor-dot, .cursor-outline {
             position: fixed; top: 0; left: 0;
             transform: translate(-50%, -50%);
             pointer-events: none; z-index: 9999; border-radius: 50%;
         }
-        .cursor-dot { width: 8px; height: 8px; background-color: var(--text-color); transition: width 0.3s, height 0.3s; }
+        
+        .cursor-dot { 
+            width: 8px; height: 8px; background-color: var(--text-color); 
+            transition: width 0.3s, height 0.3s; 
+        }
+        
         .cursor-outline {
             width: 40px; height: 40px; border: 2px solid var(--text-color);
             opacity: 0.5; transition: all 0.2s ease-out;
         }
+        
         .cursor-outline.hover { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
-
+        
         /* --- 3. Layout & General Styling --- */
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-        section { padding: 120px 0; overflow: hidden; }
+        .container { 
+            max-width: 1100px; margin: 0 auto; padding: 0 40px; 
+        }
+        
+        section { 
+            padding: 120px 0; overflow: hidden; 
+        }
+        
         h1, h2, h3 { font-weight: 700; }
+        
         h2 {
             font-size: 3rem; text-align: center; margin-bottom: 20px;
             background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
             -webkit-background-clip: text; background-clip: text; color: transparent;
         }
+        
         .section-subtitle {
             text-align: center; max-width: 700px; margin: 0 auto 80px;
             color: rgba(240, 240, 240, 0.8);
         }
+        
         .gradient-text {
             background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
             -webkit-background-clip: text; background-clip: text; color: transparent;
         }
+        
         .btn {
             display: inline-block; padding: 12px 28px;
             background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
@@ -75,13 +137,24 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
+        
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(34, 211, 238, 0.3);
         }
-
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--accent-blue);
+            color: white;
+        }
+        
         /* --- 4. Section Specific Styling --- */
-
         /* Header */
         .main-header {
             position: fixed; top: 0; left: 0;
@@ -90,21 +163,85 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
         }
-        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 900; text-decoration: none; color: var(--text-color); }
+        
+        .main-header .container { 
+            display: flex; justify-content: space-between; align-items: center; 
+        }
+        
+        .logo { 
+            font-size: 1.5rem; font-weight: 900; text-decoration: none; color: var(--text-color); 
+        }
+        
         .nav-links a {
             color: var(--text-color); text-decoration: none; margin-left: 16px;
             font-weight: 400; position: relative; padding-bottom: 5px; font-size: 0.8rem;
         }
+        
         .nav-links a::after {
             content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
             background: linear-gradient(90deg, var(--primary-color-start), var(--primary-color-end));
             transition: width 0.3s ease;
         }
+        
         .nav-links a:hover::after { width: 100%; }
-
+        
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            padding: 80px 20px 20px;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .mobile-nav-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
         /* Hero Section */
-        #hero { height: 100vh; display: flex; align-items: center; text-align: center; position: relative; }
+        #hero { 
+            height: 100vh; display: flex; align-items: center; text-align: center; position: relative; 
+        }
+        
         #hero::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15), transparent 40%),
@@ -112,11 +249,29 @@
             animation: pulse 10s ease-in-out infinite;
             z-index: 1;
         }
+        
         #hero .container { position: relative; z-index: 2; }
-        #hero h1 { font-size: 5rem; font-weight: 900; line-height: 1.1; margin-bottom: 10px; letter-spacing: -2px; }
-        #hero .hero-subtitle { font-size: 1.8rem; font-weight: 300; margin-bottom: 30px; color: rgba(240, 240, 240, 0.8); }
-        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
-
+        
+        #hero h1 { 
+            font-size: 5rem; font-weight: 900; line-height: 1.1; margin-bottom: 10px; letter-spacing: -2px; 
+        }
+        
+        #hero .hero-subtitle { 
+            font-size: 1.8rem; font-weight: 300; margin-bottom: 30px; color: rgba(240, 240, 240, 0.8); 
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @keyframes pulse { 
+            0%, 100% { transform: scale(1); opacity: 1; } 
+            50% { transform: scale(1.1); opacity: 0.8; } 
+        }
+        
         /* Client Logos Section */
         #clients {
             padding: 60px 0;
@@ -124,6 +279,7 @@
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
+        
         #clients h3 {
             text-align: center;
             font-weight: 400;
@@ -132,124 +288,532 @@
             margin-bottom: 40px;
             letter-spacing: 1px;
         }
-        .logo-scroller { max-width: 100%; margin: 0 auto; overflow: hidden; -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); }
-        .logo-scroller-inner { display: flex; gap: 5rem; width: max-content; flex-wrap: nowrap; animation: scroll 60s linear infinite; }
-        .logo-scroller-inner img { height: 35px; max-height: 35px; width: auto; filter: grayscale(1) brightness(1.5); opacity: 0.8; transition: filter 0.3s, opacity 0.3s; }
+        
+        .logo-scroller { 
+            max-width: 100%; margin: 0 auto; overflow: hidden; 
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); 
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); 
+        }
+        
+        .logo-scroller-inner { 
+            display: flex; gap: 5rem; width: max-content; flex-wrap: nowrap; 
+            animation: scroll 60s linear infinite; 
+        }
+        
+        .logo-scroller-inner img { 
+            height: 35px; max-height: 35px; width: auto; filter: grayscale(1) brightness(1.5); 
+            opacity: 0.8; transition: filter 0.3s, opacity 0.3s; 
+        }
+        
         .logo-scroller:hover .logo-scroller-inner { animation-play-state: paused; }
+        
         .logo-scroller-inner img:hover { filter: grayscale(0) brightness(1); opacity: 1; }
-        @keyframes scroll { to { transform: translate(calc(-50% - 2.5rem)); } }
-
+        
+        @keyframes scroll { 
+            to { transform: translate(calc(-50% - 2.5rem)); } 
+        }
+        
         /* About Section */
-        #about .container { display: flex; align-items: center; gap: 60px; }
+        #about .container { 
+            display: flex; align-items: center; gap: 60px; 
+        }
+        
         #about .about-content { flex: 2; }
-        #about .about-content p { margin-bottom: 15px; color: rgba(240, 240, 240, 0.8); }
-        #about .skills-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        
+        #about .about-content p { 
+            margin-bottom: 15px; color: rgba(240, 240, 240, 0.8); 
+        }
+        
+        #about .skills-list { 
+            list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; 
+        }
+        
         #about .skills-list li {
             background-color: var(--card-color); padding: 8px 15px; border-radius: 20px;
             font-size: 0.9rem; border: 1px solid var(--border-color);
         }
+        
         #about .about-image { flex: 1; max-width: 350px; }
-        #about .about-image img { width: 100%; height: auto; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.5); border: 2px solid var(--border-color); }
-
+        
+        #about .about-image img { 
+            width: 100%; height: auto; border-radius: 20px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5); 
+            border: 2px solid var(--border-color); 
+        }
+        
+        /* Portfolio Filter */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 16px;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+            color: white;
+        }
+        
         /* Generic Card Grid */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; 
+        }
+        
         .grid-card {
             background: var(--card-color); border-radius: 15px; overflow: hidden;
             border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .grid-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        .card-image-wrapper { position: relative; overflow: hidden; }
+        
+        .grid-card:hover { 
+            transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); 
+        }
+        
+        .card-image-wrapper { 
+            position: relative; overflow: hidden; 
+        }
+        
         .grid-card img {
             width: 100%; height: 250px; object-fit: cover; display: block;
             transition: transform 0.3s ease;
         }
+        
         .grid-card:hover img { transform: scale(1.05); }
+        
         .card-content { padding: 25px; }
+        
         .grid-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        
         .grid-card p { font-size: 0.95rem; color: rgba(240, 240, 240, 0.7); }
-
+        
         /* Services Card */
         .service-card-tag {
             position: absolute; top: 15px; right: 15px; background-color: var(--accent-blue);
             color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
         }
+        
         .service-card .card-content p { margin-bottom: 20px; }
-        .service-card a { color: var(--accent-blue); text-decoration: none; font-weight: 600; transition: letter-spacing 0.3s ease; }
+        
+        .service-card a { 
+            color: var(--accent-blue); text-decoration: none; font-weight: 600; 
+            transition: letter-spacing 0.3s ease; 
+        }
+        
         .service-card a:hover { letter-spacing: 0.5px; }
-
+        
         /* Work Experience Section */
-        .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
-        .timeline::after { content: ''; position: absolute; width: 3px; background: var(--border-color); top: 0; bottom: 0; left: 50%; margin-left: -1.5px; }
-        .timeline-container { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline { 
+            position: relative; max-width: 1200px; margin: 0 auto; 
+        }
+        
+        .timeline::after { 
+            content: ''; position: absolute; width: 3px; background: var(--border-color); 
+            top: 0; bottom: 0; left: 50%; margin-left: -1.5px; 
+        }
+        
+        .timeline-container { 
+            padding: 10px 40px; position: relative; background-color: inherit; width: 50%; 
+        }
+        
         .timeline-container.left { left: 0; }
+        
         .timeline-container.right { left: 50%; }
+        
         .timeline-container::after {
             content: ''; position: absolute; width: 20px; height: 20px; right: -10px;
             background-color: var(--bg-color); border: 4px solid var(--accent-blue);
             top: 25px; border-radius: 50%; z-index: 1;
         }
+        
         .timeline-container.right::after { left: -10px; }
-        .timeline-content { padding: 25px; background: var(--card-color); position: relative; border-radius: 15px; border: 1px solid var(--border-color); }
-        .timeline-content h3 { font-size: 1.4rem; color: var(--accent-blue); }
-        .timeline-content .company { font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; }
-        .timeline-content .date { font-size: 0.9rem; color: rgba(240,240,240,0.5); margin-bottom: 15px; }
-        .timeline-content ul { list-style-type: none; padding-left: 0; }
-        .timeline-content ul li { position: relative; padding-left: 20px; font-size: 0.95rem; color: rgba(240,240,240,0.8); margin-bottom: 5px; }
-        .timeline-content ul li::before { content: '›'; position: absolute; left: 0; top: 0; color: var(--accent-blue); font-weight: 900; }
-
+        
+        .timeline-content { 
+            padding: 25px; background: var(--card-color); position: relative; 
+            border-radius: 15px; border: 1px solid var(--border-color); 
+        }
+        
+        .timeline-content h3 { 
+            font-size: 1.4rem; color: var(--accent-blue); 
+        }
+        
+        .timeline-content .company { 
+            font-weight: 600; font-size: 1.1rem; margin-bottom: 5px; 
+        }
+        
+        .timeline-content .date { 
+            font-size: 0.9rem; color: rgba(240,240,240,0.5); margin-bottom: 15px; 
+        }
+        
+        .timeline-content ul { 
+            list-style-type: none; padding-left: 0; 
+        }
+        
+        .timeline-content ul li { 
+            position: relative; padding-left: 20px; font-size: 0.95rem; 
+            color: rgba(240,240,240,0.8); margin-bottom: 5px; 
+        }
+        
+        .timeline-content ul li::before { 
+            content: '›'; position: absolute; left: 0; top: 0; 
+            color: var(--accent-blue); font-weight: 900; 
+        }
+        
         /* Skills & Education Section */
-        .skills-education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-        .skills-column h3, .education-column h3 { font-size: 1.8rem; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; }
-        .skills-column h3 svg, .education-column h3 svg { width: 28px; height: 28px; fill: var(--accent-blue); }
+        .skills-education-grid { 
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; 
+        }
+        
+        .skills-column h3, .education-column h3 { 
+            font-size: 1.8rem; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; 
+        }
+        
+        .skills-column h3 svg, .education-column h3 svg { 
+            width: 28px; height: 28px; fill: var(--accent-blue); 
+        }
+        
         .skill-item { margin-bottom: 25px; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; }
-        .skill-bar { width: 100%; height: 8px; background-color: var(--card-color); border-radius: 4px; overflow: hidden; }
-        .skill-level { height: 100%; background: var(--accent-blue); border-radius: 4px; width: 0; transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); }
+        
+        .skill-info { 
+            display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 600; 
+        }
+        
+        .skill-bar { 
+            width: 100%; height: 8px; background-color: var(--card-color); 
+            border-radius: 4px; overflow: hidden; 
+        }
+        
+        .skill-level { 
+            height: 100%; background: var(--accent-blue); border-radius: 4px; 
+            width: 0; transition: width 1.5s cubic-bezier(0.25, 1, 0.5, 1); 
+        }
+        
         .education-list { list-style: none; }
-        .education-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
-        .education-item svg { flex-shrink: 0; width: 20px; height: 20px; margin-top: 5px; fill: var(--accent-blue); }
+        
+        .education-item { 
+            display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; 
+        }
+        
+        .education-item svg { 
+            flex-shrink: 0; width: 20px; height: 20px; margin-top: 5px; fill: var(--accent-blue); 
+        }
         
         /* Testimonials Section */
-        .testimonial-card { padding: 35px; position: relative; }
-        .testimonial-card .quote-icon { position: absolute; top: -10px; left: 15px; font-size: 5rem; color: var(--accent-blue); opacity: 0.1; font-weight: 900; line-height: 1; }
-        .testimonial-card blockquote { border: none; padding: 0; margin: 0 0 20px 0; font-style: italic; font-size: 1.05rem; color: rgba(240,240,240,0.9); }
+        .testimonial-card { 
+            padding: 35px; position: relative; 
+        }
+        
+        .testimonial-card .quote-icon { 
+            position: absolute; top: -10px; left: 15px; font-size: 5rem; 
+            color: var(--accent-blue); opacity: 0.1; font-weight: 900; line-height: 1; 
+        }
+        
+        .testimonial-card blockquote { 
+            border: none; padding: 0; margin: 0 0 20px 0; 
+            font-style: italic; font-size: 1.05rem; color: rgba(240,240,240,0.9); 
+        }
+        
         .client-info { text-align: right; }
-        .client-info .name { display: block; font-weight: 700; color: var(--text-color); }
-        .client-info .title { font-size: 0.9rem; color: rgba(240,240,240,0.6); }
-
-        /* Contact & Footer */
-        #contact { text-align: center; }
-        #contact p { max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: rgba(240, 240, 240, 0.8); }
-        footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--border-color); color: rgba(240, 240, 240, 0.5); }
-
+        
+        .client-info .name { 
+            display: block; font-weight: 700; color: var(--text-color); 
+        }
+        
+        .client-info .title { 
+            font-size: 0.9rem; color: rgba(240,240,240,0.6); 
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-color);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item i {
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+        }
+        
+        .form-message {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success-color);
+            color: var(--success-color);
+        }
+        
+        .form-message.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error-color);
+            color: var(--error-color);
+        }
+        
+        /* Blog Section */
+        .blog-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-card .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            padding-top: 15px;
+            font-size: 0.85rem;
+            color: rgba(240, 240, 240, 0.6);
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-blue);
+            font-weight: 600;
+            text-decoration: none;
+            transition: letter-spacing 0.3s;
+        }
+        
+        .read-more:hover {
+            letter-spacing: 0.5px;
+        }
+        
+        /* Footer */
+        footer { 
+            padding: 40px 0; text-align: center; 
+            border-top: 1px solid var(--border-color); 
+            color: rgba(240, 240, 240, 0.5); 
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-blue);
+            transform: translateY(-5px);
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+            z-index: 99;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Loading animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        
+        .loading-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
         /* --- 5. Animations & Responsiveness --- */
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
+        .fade-in { 
+            opacity: 0; transform: translateY(30px); 
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
+        }
+        
+        .fade-in.visible { 
+            opacity: 1; transform: translateY(0); 
+        }
+        
         @media (max-width: 768px) {
             h2 { font-size: 2.5rem; }
+            
             .nav-links { display: none; }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
             #hero h1 { font-size: 3rem; }
+            
             #hero .hero-subtitle { font-size: 1.2rem; }
+            
             section { padding: 80px 0; }
+            
             .container { padding: 0 20px; }
-            #about .container { flex-direction: column-reverse; text-align: center; }
-            #about .about-image { margin-bottom: 30px; max-width: 250px; }
+            
+            #about .container { 
+                flex-direction: column-reverse; text-align: center; 
+            }
+            
+            #about .about-image { 
+                margin-bottom: 30px; max-width: 250px; 
+            }
+            
             #about .skills-list { justify-content: center; }
+            
             .timeline::after { left: 20px; }
-            .timeline-container { width: 100%; padding-left: 55px; padding-right: 15px; }
+            
+            .timeline-container { 
+                width: 100%; padding-left: 55px; padding-right: 15px; 
+            }
+            
             .timeline-container.left, .timeline-container.right { left: 0%; }
+            
             .timeline-container::after { left: 10px; }
-            .skills-education-grid { grid-template-columns: 1fr; gap: 60px;}
+            
+            .skills-education-grid { 
+                grid-template-columns: 1fr; gap: 60px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
-
+    
     <header class="main-header">
         <div class="container">
             <a href="#hero" class="logo">N<span class="gradient-text">K</span>.</a>
@@ -260,161 +824,677 @@
                 <a href="#portfolio">Portfolio</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills-education">Skills</a>
+                <a href="#blog">Blog</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
-
-    <section id="hero">
-        <div class="container">
-            <h1 class="fade-in"><span class="gradient-text">Nudam Kethaka</span></h1>
-            <p class="hero-subtitle fade-in" style="transition-delay: 0.2s;">Partner With Me to Fuel Your Business’s Revolution</p>
-            <a href="#services" class="btn fade-in" style="transition-delay: 0.4s;">See My Work</a>
-        </div>
-    </section>
-
-    <section id="clients">
-        <div class="container">
-            <h3 class="fade-in">TRUSTED BY WORLD-CLASS BRANDS</h3>
-        </div>
-        <div class="logo-scroller fade-in">
-            <div class="logo-scroller-inner">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Adobe_Corporate_logo.svg" alt="Adobe"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Shopify_logo_2018.svg" alt="Shopify"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Figma-logo.svg" alt="Figma">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_logo_%282012%29.svg" alt="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Adobe_Corporate_logo.svg" alt="Adobe"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Shopify_logo_2018.svg" alt="Shopify"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Figma-logo.svg" alt="Figma">
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <div class="about-content fade-in">
-                <h2>About Me</h2>
-                <p>Specializing in brand identity Videography, Videoediting and Design, I blend technical precision with creative innovation. My work prioritizes both aesthetic impact and strategic communication, delivering visual solutions that engage audiences and drive business results.</p>
-                <p>My approach on each project with energy and precision, believing that thoughtful design can transform the audience engaged with information. I'm excited to bring our creative problem-solving skills.</p>
-                <ul class="skills-list"><li>Logo Design</li> <li>Poster Design</li> <li>Video Editing</li> <li>Invitation Card Design</li> <li>Motion Graphics</li></ul>
-            </div>
-            <div class="about-image fade-in" style="transition-delay: 0.2s;"><img src="https://ik.imagekit.io/kvtr2cjd2c/My%20Photo.png?updatedAt=1747695924076" alt="A photo of Nudam Kethaka"></div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2 class="fade-in">Our Services</h2>
-            <p class="section-subtitle fade-in">Specialized in logo design, brand identity design, Invitation Card Design, Videographer, Video editing, 3D Modeling and Illustration.</p>
-            <div class="card-grid">
-                <div class="grid-card service-card fade-in"><div class="card-image-wrapper"><img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(31).jpg?updatedAt=1747695884303" alt="Graphic Design Project"><div class="service-card-tag">Web Poster</div></div><div class="card-content"><h3>Graphic Design</h3><p>Crafted a minimalist yet impactful logo and cohesive visual identity for a sustainable lifestyle brand, reflecting eco-conscious values through clean typography and organic motifs.</p><a href="#">View Project →</a></div></div>
-                <div class="grid-card service-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(20).jpg?updatedAt=1747695884704" alt="Video Editing Project"><div class="service-card-tag">Print Design</div></div><div class="card-content"><h3>Video Editing</h3><p>Created bold, geometric typographic posters for an art exhibition, merging dynamic layouts with expressive type to evoke the event's avant-garde theme.</p><a href="#">View Project →</a></div></div>
-                <div class="grid-card service-card fade-in" style="transition-delay: 0.2s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/2058130/pexels-photo-2058130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Videographer Project"><div class="service-card-tag">Videographer</div></div><div class="card-content"><h3>Videographer</h3><p>Designed an intuitive, modern interface for a nonprofit's videography platform, enhancing usability with streamlined navigation and visually engaging interactive elements.</p><a href="#">View Project →</a></div></div>
-                <div class="grid-card service-card fade-in" style="transition-delay: 0.3s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/8350410/pexels-photo-8350410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI Video Project"><div class="service-card-tag">AI Creation</div></div><div class="card-content"><h3>AI Ads & AI Video</h3><p>Leveraging cutting-edge AI to create highly-targeted ad campaigns and generate unique video content at scale for maximum impact.</p><a href="#">View Project →</a></div></div>
-                <div class="grid-card service-card fade-in"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Social Media Handling"><div class="service-card-tag">Management</div></div><div class="card-content"><h3>Social Media Handling</h3><p>Managing and growing your social media presence with curated content, community engagement, and strategic campaigns.</p><a href="#">View Project →</a></div></div>
-                <div class="grid-card service-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://share.google/zbY1T2Ilov97w5x0l"><div class="service-card-tag">Packaging</div></div><div class="card-content"><h3>3D Modeling</h3><p>Developed eco-friendly coffee packaging using earthy tones and minimalist 3D-rendered visuals, aligning with sustainable design practices and shelf appeal.</p><a href="#">View Project →</a></div></div>
-            </div>
-        </div>
-    </section>
     
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="fade-in">My Portfolio</h2>
-            <div class="card-grid">
-                <div class="grid-card portfolio-card fade-in"><div class="card-image-wrapper"><img src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/469542593_122148850982339416_1942332988769388989_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHVnyCNAXso0T053C8CqmbUV314LwaGLFpXfXgvBoYsWlLM6vnJ5G8auqoh5vHUsou4vik23IdBSK-y8C80gJD_&_nc_ohc=FsO8R2IRbAgQ7kNvwEAD6nG&_nc_oc=AdmZNZ76bAIGxz24RYJsTJZE0PLfYdQHNmTwdd1_AJkDu69kJRNNDB9hZ1f55UEdJw8&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=HVd4-7l5qERLnsYHWz-9hQ&oh=00_AfQ3lOqFOmLil6XD6jjnmTcRwUFop8Iu8fH-UA-dYXzqVQ&oe=687E6A3B"></div><div class="card-content"><h3>Popular Singers</h3><p>A complete visual system for a tech startup, from logo to social media templates.</p></div></div>
-                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 2"></div><div class="card-content"><h3>Busines Solutions Company</h3><p>Vibrant and dynamic posters designed for a local music festival.</p></div></div>
-                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.2s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 3"></div><div class="card-content"><h3>Busines Solutions Company</h3><p>Elegant and minimalist packaging design for a luxury cosmetics brand.</p></div></div>
-                <div class="grid-card portfolio-card fade-in"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 4"></div><div class="card-content"><h3>Popular Singer</h3><p>Engaging video ads and graphics for a major social media marketing campaign.</p></div></div>
-                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.1s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 5"></div><div class="card-content"><h3>Busines Social Media Handling</h3><p>A fluid and modern logo animation for a digital agency's intro sequence.</p></div></div>
-                <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.2s;"><div class="card-image-wrapper"><img src="https://images.pexels.com/photos/2451264/pexels-photo-2451264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Project 6"></div><div class="card-content"><h3>Book Cover Design</h3><p>A compelling and thematic cover design for a best-selling science fiction novel.</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2 class="fade-in">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-container left fade-in"><div class="timeline-content"><h3>Intern Graphic Designer</h3><p class="company">Transco Digital</p><p class="date">2025 - Present</p><ul><li>Graphic Design</li><li>Video Editing</li><li>AI Video Generation</li></ul></div></div>
-                <div class="timeline-container right fade-in"><div class="timeline-content"><h3>Freelance Graphic Designer</h3><p class="company">The Management Co Intl</p><p class="date">2025 - Present</p><ul><li>Videographer</li><li>Video Editing</li><li>Social Media Handling</li></ul></div></div>
-                <div class="timeline-container left fade-in"><div class="timeline-content"><h3>Freelance Graphic Designer</h3><p class="company">Rich Business Solutions</p><p class="date">2024 - 2025</p><ul><li>Post Design</li><li>Logo Design</li></ul></div></div>
-                <div class="timeline-container right fade-in"><div class="timeline-content"><h3>Intern Graphic Designer</h3><p class="company">AITECH</p><p class="date">2024 - 2025</p><ul><li>Post Design</li><li>Video Editor</li><li>Photo Editor</li></ul></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills-education">
-        <div class="container">
-            <h2 class="fade-in">Skills & Education</h2>
-            <div class="skills-education-grid">
-                <div class="skills-column fade-in">
-                    <h3><svg viewBox="0 0 24 24"><path d="M20.4 13.2L12 21.6l-8.4-8.4L12 3.6l8.4 9.6zM12 1.2L1.2 12 12 22.8 22.8 12 12 1.2z" fill="currentColor"></path></svg>Skills</h3>
-                    <div class="skill-item"><div class="skill-info"><span>Adobe Photoshop</span><span>90%</span></div><div class="skill-bar"><div class="skill-level" data-level="90"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><span>Adobe Illustrator</span><span>80%</span></div><div class="skill-bar"><div class="skill-level" data-level="80"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><span>Adobe InDesign</span><span>50%</span></div><div class="skill-bar"><div class="skill-level" data-level="50"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><span>Davinci Resolve</span><span>70%</span></div><div class="skill-bar"><div class="skill-level" data-level="70"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><span>Autodesk Maya</span><span>10%</span></div><div class="skill-bar"><div class="skill-level" data-level="10"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><span>Videographer</span><span>50%</span></div><div class="skill-bar"><div class="skill-level" data-level="50"></div></div></div>
-                    <div class="skill-item"><div class="skill-info"><span>AI Ads & AI Video</span><span>30%</span></div><div class="skill-bar"><div class="skill-level" data-level="30"></div></div></div>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close mobile menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about">About</a>
+        <a href="#clients">Clients</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills-education">Skills</a>
+        <a href="#blog">Blog</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <main id="main-content">
+        <section id="hero">
+            <div class="container">
+                <h1 class="fade-in"><span class="gradient-text">Nudam Kethaka</span></h1>
+                <p class="hero-subtitle fade-in" style="transition-delay: 0.2s;">Partner With Me to Fuel Your Business's Revolution</p>
+                <div class="hero-buttons fade-in" style="transition-delay: 0.4s;">
+                    <a href="#services" class="btn">See My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
                 </div>
-                <div class="education-column fade-in" style="transition-delay: 0.2s;">
-                    <h3><svg viewBox="0 0 24 24"><path d="M18 7.5h-2V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2.5H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM10 5h4v2.5h-4V5zm8 14H6v-9h12v9z" fill="currentColor"></path></svg>Education</h3>
-                    <ul class="education-list">
-                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design NVQ 4 National Youth Services Council, Maharagama - (6 months)</div></li>
-                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design NVQ 5 Sri Lanka Institute of Printing, Borella</div></li>
-                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design Type Settings Sri Lanka Institute of Printing, Borella.</div></li>
-                        <li class="education-item"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path></svg><div>Certificate Course in Graphic Design Animation Sri Lanka Institute of Printing, Borella</div></li>    
+            </div>
+        </section>
+        
+        <section id="clients">
+            <div class="container">
+                <h3 class="fade-in">TRUSTED BY WORLD-CLASS BRANDS</h3>
+            </div>
+            <div class="logo-scroller fade-in">
+                <div class="logo-scroller-inner">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Adobe_Corporate_logo.svg" alt="Adobe"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Shopify_logo_2018.svg" alt="Shopify"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Figma-logo.svg" alt="Figma">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_logo_%282012%29.svg" alt="Microsoft"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Adobe_Corporate_logo.svg" alt="Adobe"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Shopify_logo_2018.svg" alt="Shopify"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Figma-logo.svg" alt="Figma">
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <div class="about-content fade-in">
+                    <h2>About Me</h2>
+                    <p>Specializing in brand identity Videography, Videoediting and Design, I blend technical precision with creative innovation. My work prioritizes both aesthetic impact and strategic communication, delivering visual solutions that engage audiences and drive business results.</p>
+                    <p>My approach on each project with energy and precision, believing that thoughtful design can transform the audience engaged with information. I'm excited to bring our creative problem-solving skills.</p>
+                    <ul class="skills-list">
+                        <li>Logo Design</li> 
+                        <li>Poster Design</li> 
+                        <li>Video Editing</li> 
+                        <li>Invitation Card Design</li> 
+                        <li>Motion Graphics</li>
                     </ul>
                 </div>
+                <div class="about-image fade-in" style="transition-delay: 0.2s;">
+                    <img src="https://ik.imagekit.io/kvtr2cjd2c/My%20Photo.png?updatedAt=1747695924076" alt="A photo of Nudam Kethaka">
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="fade-in">Client Testimonials</h2>
-            <p class="section-subtitle fade-in">What my clients say about my work.</p>
-            <div class="card-grid">
-                <div class="grid-card testimonial-card fade-in"><div class="quote-icon">”</div><blockquote>Nudam's creativity and attention to detail are second to none. He took our initial concept and transformed it into a brand identity that exceeded all our expectations. A true professional and a pleasure to work with.</blockquote><div class="client-info"><span class="name">Jane Doe</span><span class="title">Marketing Manager, TechCorp</span></div></div>
-                <div class="grid-card testimonial-card fade-in" style="transition-delay: 0.2s;"><div class="quote-icon">”</div><blockquote>Working with Nudam was a game-changer for our launch. The videos he produced were not only visually stunning but also delivered incredible results for our campaign. Fast, communicative, and incredibly talented.</blockquote><div class="client-info"><span class="name">John Smith</span><span class="title">Founder, Innovate Startups</span></div></div>
+        </section>
+        
+        <section id="services">
+            <div class="container">
+                <h2 class="fade-in">Our Services</h2>
+                <p class="section-subtitle fade-in">Specialized in logo design, brand identity design, Invitation Card Design, Videographer, Video editing, 3D Modeling and Illustration.</p>
+                <div class="card-grid">
+                    <div class="grid-card service-card fade-in">
+                        <div class="card-image-wrapper">
+                            <img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(31).jpg?updatedAt=1747695884303" alt="Graphic Design Project">
+                            <div class="service-card-tag">Web Poster</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Graphic Design</h3>
+                            <p>Crafted a minimalist yet impactful logo and cohesive visual identity for a sustainable lifestyle brand, reflecting eco-conscious values through clean typography and organic motifs.</p>
+                            <a href="#">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card service-card fade-in" style="transition-delay: 0.1s;">
+                        <div class="card-image-wrapper">
+                            <img src="https://ik.imagekit.io/kvtr2cjd2c/image_fx%20(20).jpg?updatedAt=1747695884704" alt="Video Editing Project">
+                            <div class="service-card-tag">Print Design</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Video Editing</h3>
+                            <p>Created bold, geometric typographic posters for an art exhibition, merging dynamic layouts with expressive type to evoke the event's avant-garde theme.</p>
+                            <a href="#">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card service-card fade-in" style="transition-delay: 0.2s;">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/2058130/pexels-photo-2058130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Videographer Project">
+                            <div class="service-card-tag">Videographer</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Videographer</h3>
+                            <p>Designed an intuitive, modern interface for a nonprofit's videography platform, enhancing usability with streamlined navigation and visually engaging interactive elements.</p>
+                            <a href="#">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card service-card fade-in" style="transition-delay: 0.3s;">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/8350410/pexels-photo-8350410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI Video Project">
+                            <div class="service-card-tag">AI Creation</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>AI Ads & AI Video</h3>
+                            <p>Leveraging cutting-edge AI to create highly-targeted ad campaigns and generate unique video content at scale for maximum impact.</p>
+                            <a href="#">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card service-card fade-in">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Social Media Handling">
+                            <div class="service-card-tag">Management</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Social Media Handling</h3>
+                            <p>Managing and growing your social media presence with curated content, community engagement, and strategic campaigns.</p>
+                            <a href="#">View Project →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card service-card fade-in" style="transition-delay: 0.1s;">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="3D Modeling Project">
+                            <div class="service-card-tag">Packaging</div>
+                        </div>
+                        <div class="card-content">
+                            <h3>3D Modeling</h3>
+                            <p>Developed eco-friendly coffee packaging using earthy tones and minimalist 3D-rendered visuals, aligning with sustainable design practices and shelf appeal.</p>
+                            <a href="#">View Project →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <section id="portfolio">
+            <div class="container">
+                <h2 class="fade-in">My Portfolio</h2>
+                <div class="portfolio-filter fade-in">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+                    <button class="filter-btn" data-filter="video">Video</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                    <button class="filter-btn" data-filter="social-media">Social Media</button>
+                </div>
+                <div class="card-grid">
+                    <div class="grid-card portfolio-card fade-in" data-category="branding">
+                        <div class="card-image-wrapper">
+                            <img src="https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/469542593_122148850982339416_1942332988769388989_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHVnyCNAXso0T053C8CqmbUV314LwaGLFpXfXgvBoYsWlLM6vnJ5G8auqoh5vHUsou4vik23IdBSK-y8C80gJD_&_nc_ohc=FsO8R2IRbAgQ7kNvwEAD6nG&_nc_oc=AdmZNZ76bAIGxz24RYJsTJZE0PLfYdQHNmTwdd1_AJkDu69kJRNNDB9hZ1f55UEdJw8&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=HVd4-7l5qERLnsYHWz-9hQ&oh=00_AfQ3lOqFOmLil6XD6jjnmTcRwUFop8Iu8fH-UA-dYXzqVQ&oe=687E6A3B" alt="Popular Singers Branding">
+                        </div>
+                        <div class="card-content">
+                            <h3>Popular Singers</h3>
+                            <p>A complete visual system for a tech startup, from logo to social media templates.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.1s;" data-category="graphic-design">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Business Solutions Company Poster">
+                        </div>
+                        <div class="card-content">
+                            <h3>Business Solutions Company</h3>
+                            <p>Vibrant and dynamic posters designed for a local music festival.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.2s;" data-category="branding">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Business Solutions Company Packaging">
+                        </div>
+                        <div class="card-content">
+                            <h3>Business Solutions Company</h3>
+                            <p>Elegant and minimalist packaging design for a luxury cosmetics brand.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card portfolio-card fade-in" data-category="video">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Popular Singer Video">
+                        </div>
+                        <div class="card-content">
+                            <h3>Popular Singer</h3>
+                            <p>Engaging video ads and graphics for a major social media marketing campaign.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.1s;" data-category="social-media">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/5490235/pexels-photo-5490235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Business Social Media Handling">
+                        </div>
+                        <div class="card-content">
+                            <h3>Business Social Media Handling</h3>
+                            <p>A fluid and modern logo animation for a digital agency's intro sequence.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card portfolio-card fade-in" style="transition-delay: 0.2s;" data-category="graphic-design">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/2451264/pexels-photo-2451264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Book Cover Design">
+                        </div>
+                        <div class="card-content">
+                            <h3>Book Cover Design</h3>
+                            <p>A compelling and thematic cover design for a best-selling science fiction novel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <div class="container">
+                <h2 class="fade-in">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-container left fade-in">
+                        <div class="timeline-content">
+                            <h3>Intern Graphic Designer</h3>
+                            <p class="company">Transco Digital</p>
+                            <p class="date">2025 - Present</p>
+                            <ul>
+                                <li>Graphic Design</li>
+                                <li>Video Editing</li>
+                                <li>AI Video Generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-container right fade-in">
+                        <div class="timeline-content">
+                            <h3>Freelance Graphic Designer</h3>
+                            <p class="company">The Management Co Intl</p>
+                            <p class="date">2025 - Present</p>
+                            <ul>
+                                <li>Videographer</li>
+                                <li>Video Editing</li>
+                                <li>Social Media Handling</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-container left fade-in">
+                        <div class="timeline-content">
+                            <h3>Freelance Graphic Designer</h3>
+                            <p class="company">Rich Business Solutions</p>
+                            <p class="date">2024 - 2025</p>
+                            <ul>
+                                <li>Post Design</li>
+                                <li>Logo Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-container right fade-in">
+                        <div class="timeline-content">
+                            <h3>Intern Graphic Designer</h3>
+                            <p class="company">AITECH</p>
+                            <p class="date">2024 - 2025</p>
+                            <ul>
+                                <li>Post Design</li>
+                                <li>Video Editor</li>
+                                <li>Photo Editor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills-education">
+            <div class="container">
+                <h2 class="fade-in">Skills & Education</h2>
+                <div class="skills-education-grid">
+                    <div class="skills-column fade-in">
+                        <h3>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20.4 13.2L12 21.6l-8.4-8.4L12 3.6l8.4 9.6zM12 1.2L1.2 12 12 22.8 22.8 12 12 1.2z" fill="currentColor"></path>
+                            </svg>
+                            Skills
+                        </h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Adobe Photoshop</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Adobe Illustrator</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Adobe InDesign</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Davinci Resolve</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Autodesk Maya</span>
+                                <span>10%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="10"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Videographer</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>AI Ads & AI Video</span>
+                                <span>30%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="30"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-column fade-in" style="transition-delay: 0.2s;">
+                        <h3>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M18 7.5h-2V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2.5H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2zM10 5h4v2.5h-4V5zm8 14H6v-9h12v9z" fill="currentColor"></path>
+                            </svg>
+                            Education
+                        </h3>
+                        <ul class="education-list">
+                            <li class="education-item">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path>
+                                </svg>
+                                <div>Certificate Course in Graphic Design NVQ 4 National Youth Services Council, Maharagama - (6 months)</div>
+                            </li>
+                            <li class="education-item">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path>
+                                </svg>
+                                <div>Certificate Course in Graphic Design NVQ 5 Sri Lanka Institute of Printing, Borella</div>
+                            </li>
+                            <li class="education-item">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path>
+                                </svg>
+                                <div>Certificate Course in Graphic Design Type Settings Sri Lanka Institute of Printing, Borella.</div>
+                            </li>
+                            <li class="education-item">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path>
+                                </svg>
+                                <div>Certificate Course in Graphic Design Animation Sri Lanka Institute of Printing, Borella</div>
+                            </li>    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="blog">
+            <div class="container">
+                <h2 class="fade-in">Latest Blog Posts</h2>
+                <p class="section-subtitle fade-in">Insights, tutorials, and industry trends from my design journey.</p>
+                <div class="card-grid">
+                    <div class="grid-card blog-card fade-in">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Design Trends Article">
+                        </div>
+                        <div class="card-content">
+                            <h3>Top Graphic Design Trends for 2025</h3>
+                            <p>Explore the latest design trends that are shaping the creative industry this year, from minimalist approaches to bold color choices.</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> March 15, 2025</span>
+                                <span><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card blog-card fade-in" style="transition-delay: 0.1s;">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Video Editing Tutorial">
+                        </div>
+                        <div class="card-content">
+                            <h3>Video Editing Tips for Beginners</h3>
+                            <p>Learn essential video editing techniques that will help you create professional-looking videos, even if you're just starting out.</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> February 28, 2025</span>
+                                <span><i class="far fa-clock"></i> 8 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <div class="grid-card blog-card fade-in" style="transition-delay: 0.2s;">
+                        <div class="card-image-wrapper">
+                            <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Brand Identity Article">
+                        </div>
+                        <div class="card-content">
+                            <h3>Building a Strong Brand Identity</h3>
+                            <p>Discover the key elements of creating a memorable brand identity that resonates with your target audience and stands out from competitors.</p>
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> February 10, 2025</span>
+                                <span><i class="far fa-clock"></i> 6 min read</span>
+                            </div>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="fade-in">Client Testimonials</h2>
+                <p class="section-subtitle fade-in">What my clients say about my work.</p>
+                <div class="card-grid">
+                    <div class="grid-card testimonial-card fade-in">
+                        <div class="quote-icon">"</div>
+                        <blockquote>Nudam's creativity and attention to detail are second to none. He took our initial concept and transformed it into a brand identity that exceeded all our expectations. A true professional and a pleasure to work with.</blockquote>
+                        <div class="client-info">
+                            <span class="name">Jane Doe</span>
+                            <span class="title">Marketing Manager, TechCorp</span>
+                        </div>
+                    </div>
+                    <div class="grid-card testimonial-card fade-in" style="transition-delay: 0.2s;">
+                        <div class="quote-icon">"</div>
+                        <blockquote>Working with Nudam was a game-changer for our launch. The videos he produced were not only visually stunning but also delivered incredible results for our campaign. Fast, communicative, and incredibly talented.</blockquote>
+                        <div class="client-info">
+                            <span class="name">John Smith</span>
+                            <span class="title">Founder, Innovate Startups</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="container fade-in">
+                <h2>Get In Touch</h2>
+                <p>I'm available for freelance projects. If you have a project in mind or just want to say hello, feel free to reach out. Let's create something amazing together!</p>
+                
+                <div class="contact-form" id="contactForm">
+                    <div class="form-message" id="formMessage"></div>
+                    <form id="contactFormElement">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>nudamkethaka@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+94 71 234 5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Colombo, Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <section id="contact">
-        <div class="container fade-in">
-            <h2>Get In Touch</h2>
-            <p>I'm available for freelance projects. If you have a project in mind or just want to say hello, feel free to reach out. Let's create something amazing together!</p>
-            <a href="nudamkethaka@gmail.com" class="btn">Say Hello</a>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <p>© 2025 Nudam Kethaka. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+                    <i class="fab fa-behance"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
             <p>Work With Me. Grow your business.</p>
         </div>
     </footer>
-
+    
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading overlay after page loads
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    document.getElementById('loadingOverlay').classList.add('hidden');
+                }, 500);
+            });
             
             // --- 1. Custom Cursor Logic ---
             const cursorDot = document.querySelector('.cursor-dot');
             const cursorOutline = document.querySelector('.cursor-outline');
-            const interactiveElements = document.querySelectorAll('a, button, .grid-card');
-
+            const interactiveElements = document.querySelectorAll('a, button, .grid-card, input, textarea');
+            
             window.addEventListener('mousemove', function(e) {
                 cursorDot.style.left = `${e.clientX}px`;
                 cursorDot.style.top = `${e.clientY}px`;
                 cursorOutline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
             });
-
+            
             interactiveElements.forEach(el => {
                 el.addEventListener('mouseenter', () => cursorOutline.classList.add('hover'));
                 el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hover'));
             });
-
-            // --- 2. Scroll Animation Logic (Intersection Observer) ---
+            
+            // --- 2. Mobile Menu Logic ---
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+            });
+            
+            mobileNavClose.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+            
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                });
+            });
+            
+            // --- 3. Portfolio Filter Logic ---
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioCards = document.querySelectorAll('.portfolio-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    portfolioCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // --- 4. Contact Form Logic ---
+            const contactFormElement = document.getElementById('contactFormElement');
+            const formMessage = document.getElementById('formMessage');
+            
+            contactFormElement.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Simple form validation
+                if (!name || !email || !subject || !message) {
+                    showFormMessage('Please fill in all fields.', 'error');
+                    return;
+                }
+                
+                // In a real implementation, you would send the form data to a server here
+                // For this example, we'll just show a success message
+                showFormMessage('Thank you for your message! I will get back to you soon.', 'success');
+                
+                // Reset form
+                contactFormElement.reset();
+            });
+            
+            function showFormMessage(message, type) {
+                formMessage.textContent = message;
+                formMessage.className = 'form-message ' + type;
+                formMessage.style.display = 'block';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            // --- 5. Back to Top Button Logic ---
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // --- 6. Scroll Animation Logic (Intersection Observer) ---
             const fadeElems = document.querySelectorAll('.fade-in');
             const skillLevels = document.querySelectorAll('.skill-level');
-
+            
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -433,12 +1513,33 @@
                     }
                 });
             }, { threshold: 0.15 });
-
+            
             fadeElems.forEach(el => observer.observe(el));
+            
+            // --- 7. Lazy Loading for Images ---
+            if ('IntersectionObserver' in window) {
+                const imgOptions = {
+                    threshold: 0,
+                    rootMargin: "0px 0px 300px 0px"
+                };
+                
+                const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imgObserver.unobserve(img);
+                        }
+                    });
+                }, imgOptions);
+                
+                const lazyImages = document.querySelectorAll('img.lazy');
+                lazyImages.forEach(img => {
+                    imgObserver.observe(img);
+                });
+            }
         });
     </script>
 </body>
 </html>
-
-
-
